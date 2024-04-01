@@ -5,15 +5,39 @@ var medioPago = "";
 var numeroWhatsApp = "+541144305694"; // Reemplaza esto con tu número real
 
 // Función para agregar un producto al carrito
+// function agregarAlCarrito(nombre, precio) {
+//     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
+//     if (!isNaN(cantidad) && cantidad > 0) {
+//         carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
+//         actualizarCarrito();
+//     } else {
+//         alert("La cantidad ingresada no es válida.");
+//     }
+// }
+
 function agregarAlCarrito(nombre, precio) {
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
     if (!isNaN(cantidad) && cantidad > 0) {
-        carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
+        var productoExistenteIndex = carrito.findIndex(function (producto) {
+            return producto.nombre === nombre;
+        });
+
+        if (productoExistenteIndex !== -1) {
+            // Si el producto ya está en el carrito, aumentar la cantidad
+            carrito[productoExistenteIndex].cantidad += cantidad;
+        } else {
+            // Si el producto no está en el carrito, agregarlo
+            carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
+        }
+
+        // Actualizar la visualización del carrito
         actualizarCarrito();
     } else {
         alert("La cantidad ingresada no es válida.");
     }
 }
+
+
 
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(id) {
@@ -147,6 +171,7 @@ function enviarPedido() {
     // Asignar el enlace al enlace de pedido
     document.getElementById("pedidoLink").href = enlacePedido;
 }
+
 // // Función para enviar el pedido por WhatsApp
 // function enviarPedido() {
 //     if (medioPago === "") {
