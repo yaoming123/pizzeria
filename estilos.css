@@ -1,0 +1,544 @@
+:root {
+    --color1:#ea2f38;
+    --color2:black;;
+    --color3:white;
+
+    --texto:#ffd402; 
+;
+    /* --color3:white;
+    --color3:white;
+    --color3:white;
+    --color3:white; */
+}
+
+.message {
+    font-size: 1em;
+    text-align: center;
+    background-color: var(--color2);
+    /* color: white; */
+}
+
+.scroll-section {
+    margin-top: 4rem;
+    /* Ajusta según sea necesario para que el título sea visible */
+    padding-top: 4rem;
+    /* Asegura que el contenido no quede oculto por el margen superior negativo */
+}
+
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    animation-iteration-count: infinite;
+
+}
+
+.animation_back_in_rigth {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: slideInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    /* animation-iteration-count: infinite; */
+
+}
+
+.animation_bounce {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    /* animation-iteration-count: infinite; */
+
+}
+
+.responsive-iframe {
+    width: 90%;
+    padding: 1em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Bebas Neue';
+}
+
+body {
+    /* text-transform: uppercase; */
+    font-size: 16px;
+    /* background-color: white;
+    color: white; */
+    color: var(--texto);
+    background-image: url(./imagenes/tomate.png);
+    background-size: 6em;
+}
+
+/* NAV */
+nav {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 1;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    /* margin: 0;
+    padding: 0; */
+}
+
+nav li {
+    display: inline-block;
+}
+
+a {
+    color: var(--texto);
+}
+
+nav ul li a {
+    color: black;
+    display: inline-block;
+    padding: 0.5em;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    /* font-size: 0.5em; */
+}
+
+nav ul li a:hover {
+    color: var(--color1);
+
+
+}
+
+nav ul li a:active {
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    background-color: white;
+}
+
+nav ul li a.active::before {
+    background-color: var(--color1);
+}
+
+/* FIN NAV */
+
+.contenedor {
+    background-color: var(--color2);
+    width: 95%;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    font-variant: all-petite-caps;
+}
+
+#contenido-principal {
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+    /* background: linear-gradient(rgb(51 51 51) 15%, #1a73e8 100%); */
+    /* background-position: center, center; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    min-height: 20.345em;
+}
+
+
+header h1 {
+    font-size: 7rem;
+    /* color: #FFF; */
+}
+
+header h2 {
+    font-size: 3rem;
+    /* color: #fbfbfbc9; */
+    /* color: #fa8231; */
+
+}
+
+header p {
+    font-size: 3rem;
+    /* color: #ffffffe3; */
+    column-count: 1;
+}
+
+
+
+/* header de h1 al h6{} */
+
+main {
+    background-color: var(--color2);
+    height: auto;
+    text-align: center;
+    font-variant: all-petite-caps;
+
+}
+
+#productos {
+    margin-top: auto;
+    /* padding-top: 5em;
+    padding-bottom: 5em; */
+    background-color: var(--color2);
+}
+
+
+#productos h1,
+h3 {
+    /* font-size: 4rem; */
+    padding: initial;
+    font-size: 8rem;
+}
+
+#productos h2 {
+    font-size: 7rem;
+}
+
+#productos h4 {
+    /* font-size: 2rem; */
+    font-size: 5rem;
+}
+
+#productos p {
+    font-size: 3.5rem;
+}
+
+
+#productos .button1 {
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    font-family: 'Bebas Neue';
+}
+
+#productos .button1:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+.servicio {
+    display: inline-block;
+    padding: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.producto {
+    display: inline-block;
+    padding: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 18em;
+}
+  
+.producto img{
+    width: 10em;
+    height: 10em;
+    float: none;
+}
+
+/* Seccion contacto */
+
+#contacto h3 {
+    font-size: 7rem;
+    /* color: white; */
+}
+
+#contacto h4 {
+    font-size: 3rem;
+    column-count: 1;
+}
+
+#contato p {
+    font-size: 1.5rem;
+}
+
+#contacto a.boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    width: 100%;
+    /* height: 200px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border: 2px solid #000;
+    border-radius: 10px;
+    /* aspect-ratio: 1 / 1;  */
+    font-size: 1.5em;
+    text-decoration: none;
+    /* color: #fff; */
+    background-color: #333333e8;
+
+}
+
+#container-carrito{
+    margin-top: auto;
+    background-color: var(--color2);
+    padding-bottom: 5em;
+}
+
+#container-carrito .button1 {
+    width: 50%;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 0.4em;
+}
+#container-carrito .button1:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+#carrito{
+    font-size: 2em;
+    padding-bottom: 2em;
+}
+#carrito li{
+    list-style: none;
+    border-style: solid;
+}
+#carrito ul li .button1 {
+    width: 30%;
+    margin: 0.5em;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 0.4em;
+}
+#carrito ul li .button1:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    text-decoration: none;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color3);
+}
+
+footer img {
+    width: 2em;
+    height: 2em;
+    text-decoration: none;
+    margin-top: auto;
+    /* margin-bottom: -7px; */
+}
+
+footer a {
+    text-decoration: none;
+    /* font-size: 1.69em; */
+    color: black;
+}
+
+.box_logo {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.box_logo p {
+    /* font-size: x-large; */
+    font-size: 3rem;
+    color: black;
+}
+
+.box_logo img {
+    height: 150px;
+}
+
+.box_footer {
+    width: fit-content;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    float: left;
+    transition: 1s;
+}
+
+.box_footer:hover {
+    color: white;
+    background-color: var(--color2);
+    transition-timing-function: linear;
+}
+
+.box_footer a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+
+
+
+/* Estilos para el botón "Subir" */
+.scroll-to-top {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* background-color: #007bff; */
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    border-radius: 50%;
+    /* Hacerlo circular */
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+    /* Asegura que esté encima de otros elementos */
+}
+
+/* Estilos al pasar el mouse por encima del botón */
+.scroll-to-top:hover {
+    background-color: var(--verde);
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.button {
+    border: none;
+    /* color: white; */
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-variant: normal;
+}
+
+.button1 {
+    border-radius: 0.4em;
+    color: black;
+    background-color: white;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+}
+
+.button1:hover {
+    color: black;
+}
+
+/* Boton de ir al pie de la pagina */
+.button-flotante {
+    border: 0.2em solid var(--rojo);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color1);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    border-radius: 0.4em;
+    text-decoration: none;
+    margin-bottom: -10px;
+}
+
+.separador_box_footer {
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+/* Fonts */
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-regular {
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-bold {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* .producto {
+    display: grid; /* Cambiado a display grid para utilizar las propiedades de grid 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mantiene el mismo esquema de columnas 
+    grid-gap: 20px; /* Espaciado entre los elementos 
+    justify-content: center; /* Centra los elementos horizontalmente 
+    align-items: center; /* Centra los elementos verticalmente 
+    padding: 1em; /* Espaciado interno 
+    margin: 0 auto; /* Centra el contenedor 
+    max-width: 1000px; Establece un ancho máximo para el contenedor  */
