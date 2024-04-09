@@ -2,7 +2,7 @@
 var carrito = [];
 var direccion = "";
 var medioPago = "";
-var numeroWhatsApp = "+541144305694"; // Reemplaza esto con tu número real
+var numeroWhatsApp = "+541122334455"; // Reemplaza esto con tu número real
 
 // Función para agregar un producto al carrito
 // function agregarAlCarrito(nombre, precio) {
@@ -65,7 +65,7 @@ function actualizarCarrito() {
         total += subtotal;
     });
     carritoHTML += "</ul>";
-    carritoHTML += "<p>Total: " + total + "$</p>";
+    carritoHTML += "<p>El total es: " + total + "$</p>";
     document.getElementById("carrito").innerHTML = carritoHTML;
     document.getElementById("carrito-terminar-pedido").style.display = "block"; // Mostrar el elemento
 }
@@ -98,7 +98,7 @@ function editarProducto(id) {
 //     direccion = prompt("Ingrese la dirección con entre calles:");
 // }
 function solicitarDireccion() {
-    direccion = prompt("Ingrese la dirección con entre calles:");
+    direccion = prompt("Ingrese la Direccion, localidad y entre calles:");
     while (direccion === "") {
         direccion = prompt("Por favor, ingrese una dirección válida:");
     }
@@ -144,7 +144,7 @@ function enviarPedido() {
         while (montoAbonado === ""){
            montoAbonado = prompt("Por favor, ingrese un monto válido:"); 
         }    
-        mensaje += "Monto abonado: " + montoAbonado + "$\n";
+        mensaje += "Voy a abonar con: " + montoAbonado + "$\n";
     } else if (medioPago === "Transferencia Bancaria") {
         var nombreydocumento = prompt("Ingrese el nombre completo y documento de quién realizará la transferencia bancaria:");
         while (nombreydocumento === ""){
@@ -156,13 +156,14 @@ function enviarPedido() {
     }
 
     // Mensaje final, listo para enviar.
-    mensaje += "Total: " + calcularTotal() + "$";
+    var total = calcularTotal();
+    var vuelto = montoAbonado - total;
+    mensaje += "El Total: " + total + "$\n";
+    mensaje += "El vuelto:" + vuelto + "$\n"
 
-    // // Verificar si la cadena "null" aparece en el mensaje
-    // if (mensaje.includes("null")) {
-    //     alert("Por favor complete los datos anteriores");
-    //     return;
-    // }
+    //  Calcular el vuelto para poner en el mensaje
+
+
     if (mensaje.includes("null")) {
         // Reemplazar "null" por "[COMPLETAR AQUI]"
         var mensajeModificado = mensaje.replace(/null/g, "[COMPLETAR AQUI]");
