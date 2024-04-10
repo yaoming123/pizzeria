@@ -340,6 +340,8 @@ h3 {
 }
 
 footer {
+    padding-top: 4em;
+    padding-bottom: 4em;
     text-align: center;
     text-decoration: none;
     position: static;
