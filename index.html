@@ -12,7 +12,7 @@
     <meta name="author" content="pizzeria">
 
     <link rel="icon" type="image/x-icon" href=logo.png>
-    <title></title>
+    <title>Sitio web de pizzeria [NOMBRE]</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -28,7 +28,7 @@
 
     <link rel="canonical" href="http://www.pizzeria.com/.html">
 
-    <meta property="og:title" content="">
+    <meta property="og:title" content="Sitio web de pizzeria [NOMBRE]">
     <meta property="og:description" content="descripcion pizzeria">
     <meta property="og:image" content="logo.png">
     <meta property="og:url" content="http://www.pizzeria.com/">
@@ -65,13 +65,14 @@
     
 <!-- BODY -->
 <body>
+    <!-- Boton flotante -->
     <a class="button-flotante" href="#container-carrito">Carrito</a>
 
     <!-- Message in top page -->
     
 <!-- MESSAGE IMPORTANT -->
     <p class="message">Lunes a Viernes de: 9:00hs a 13:00 y de 15:00 a 19:00. Domingos 9:00AM a 17:00PM
-        <a href="tel:123456587" class="back-button">direccion 123, localidad, provincia.</a>
+        <a href="https://www.google.com/maps?ll=-38.45155,-63.598996&z=3&t=m&hl=es-419&gl=AR&mapclient=embed&q=Argentina" class="back-button">direccion 123, localidad, provincia.</a>
     </p>
     <p class="message">
         <a href="" class="back-button"></a>
@@ -84,41 +85,47 @@
     
     <div class="box_logo">
         <img src="logo.png" alt="icono de Pizzeria">
-        <p class="parisienne-regular">Pizzeria "nombre" </p>
-        <p class="parisienne-regular">Desde 1982</p>
+        <p>Pizzeria "[NOMBRE]" </p>
+        <p>Desde 1982</p>
     </div>
     
     <!-- End Box logo -->
     
     <!-- NAV -->
     
-    <!-- NAV -->
     <nav>
         <ul>
     
             <li>
-                <a href="#pizzas">🍕 Pizzas</a>
+                <a href="#contacto" style="background-color: #ea2f38; color:white;">contacto</a>
             </li>
         
             <li>
-                <a href="#empanadas">🥟 Empanadas</a>
+                <a href="#pizzas">🍕pizzas</a>
             </li>
         
             <li>
-                <a href="#sandwichs">🥖 Sandwichs</a>
+                <a href="#empanadas">🥟empanadas</a>
             </li>
         
             <li>
-                <a href="#gaseosas">🥤 Gaseosas</a>
+                <a href="#sandwichs">🥖sandwichs</a>
             </li>
         
             <li>
-                <a href="#cervezas">🍻 Cervezas</a>
+                <a href="#gaseosas">🥤gaseosas</a>
+            </li>
+        
+            <li>
+                <a href="#cervezas">🍻cervezas</a>
+            </li>
+        
+            <li>
+                <a href="#panchos">🌭panchos</a>
             </li>
         
         </ul>
     </nav>
-    <!-- FIN NAV -->
     
     <!-- FIN NAV -->
     
@@ -138,15 +145,15 @@
     
     <div class="scroll-section" id="contacto">
         <h3>Informacion de contacto</h3>
-        <h4></h4>
+        <h4>Lunes a Viernes de: 9:00hs a 13:00 y de 15:00 a 19:00.<br> Domingos 9:00AM a 17:00PM <br> Direccion 123, Localidad, Provincia.</h4>
         <br>
         
         <div style="text-align: center;">
-            <a class="button button1 my-element" href="tel:123456587" style="width:45%;">📞 ¡Llamar al 123456587 (direccion 123, localidad, provincia.)!</a>
+            <a class="button button1 my-element" href="tel:1111111111" style="width:45%;">📞 llamar al 1111111111</a>
         </div>
 
         <div style="text-align: center;">
-            <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26273443.53446075!2d-84.86541180172095!3d-36.5008538318338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses-419!2sar!4v1712450390318!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26273443.53446075!2d-84.86541180172095!3d-36.5008538318338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses-419!2sar!4v1712450390318!5m2!1ses-419!2sar " width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -159,7 +166,6 @@
     <!-- MAIN -->
     <main>
         <div class="contenedor">
-
         
 <!-- Seccion productos -->
 <div class="scroll-section" id="productos">
@@ -186,31 +192,31 @@
 <!-- Fin carrito -->
 
 
-<h2 id="titulo-productos">Nuestros Productos</h2>
+<h2 id="titulo-productos">Nuestros Productos </h2>
 <p>Explore aqui todos nuestos productos</p>
 
 
     <!-- Sección del listado de productos -->
     <div id="pizzas" class="scroll-section" style="border-style: solid;">
-        <h3>🍕 Pizzas</h3>
+        <h3>🍕pizzas</h3>
         <h4>Descubre nuestras deliciosas pizzas</h4>
         <p>¡Te encantarán!</p>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Pizza Margherita</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Deliciosa pizza con salsa de tomate, mozzarella fresca y albahaca</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 10</p>
-                <img src="imagenes/productos/pizzas/Receta-de-Pizza-Muzzarella-saborargento.com.ar.webp">
-                <button onclick="agregarAlCarrito('Pizza Margherita', 10)" class="button button1" style="font-size: 1.5em;">Agregar Pizza Margherita</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: Pizza margherita </p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Deliciosa pizza con salsa de tomate, mozzarella fresca y albahaca </p>
+                <p style="font-size: 2em; text-align: start;">Precio: 7500</p>
+                <img src="imagenes/productos/pizzas/Receta-de-Pizza-Muzzarella-saborargento.com.ar.webp ">
+                <button onclick="agregarAlCarrito('Pizza margherita ', 7500)" class="button button1" style="font-size: 1.5em;">Agregar Pizza margherita </button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Pizza Pepperoni</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Pizza clásica con salsa de tomate, mozzarella y abundantes rodajas de pepperoni</p>
+                <p style="font-size: 2em; text-align: start;">Nombre: Pizza peperoni</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Pizza clásica con salsa de tomate, mozzarella y abundantes rodajas de pepperoni </p>
                 <p style="font-size: 2em; text-align: start;">Precio: 12</p>
-                <img src="imagenes/productos/pizzas/Receta-de-Pizza-Muzzarella-saborargento.com.ar.webp">
-                <button onclick="agregarAlCarrito('Pizza Pepperoni', 12)" class="button button1" style="font-size: 1.5em;">Agregar Pizza Pepperoni</button>
+                <img src="imagenes/productos/pizzas/Receta-de-Pizza-Muzzarella-saborargento.com.ar.webp ">
+                <button onclick="agregarAlCarrito('Pizza peperoni', 12)" class="button button1" style="font-size: 1.5em;">Agregar Pizza peperoni</button>
 
             </div>
 
@@ -220,25 +226,25 @@
 
     <!-- Sección del listado de productos -->
     <div id="empanadas" class="scroll-section" style="border-style: solid;">
-        <h3>🥟 Empanadas</h3>
-        <h4>Prueba nuestras sabrosas empanadas</h4>
-        <p>¡Una delicia para cualquier ocasión!</p>
+        <h3>🥟empanadas</h3>
+        <h4>Prueba nuestras sabrosas empanadas </h4>
+        <p>¡Una delicia para cualquier ocasión! </p>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Empanada Jamón y Queso</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Empanada rellena de jamón y queso, horneada a la perfección</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 8</p>
-                <img src="imagenes/productos/empanadas/empanadas.jpeg">
-                <button onclick="agregarAlCarrito('Empanada Jamón y Queso', 8)" class="button button1" style="font-size: 1.5em;">Agregar Empanada Jamón y Queso</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: empanadas de Jamón y queso.</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Empanada rellena de jamón y queso, horneada a la perfección </p>
+                <p style="font-size: 2em; text-align: start;">Precio: 10000</p>
+                <img src="imagenes/productos/empanadas/empanadas.jpeg ">
+                <button onclick="agregarAlCarrito('empanadas de Jamón y queso.', 10000)" class="button button1" style="font-size: 1.5em;">Agregar empanadas de Jamón y queso.</button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Empanada de Carne</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Empanada clásica argentina rellena de carne sazonada</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 9</p>
-                <img src="imagenes/productos/empanadas/empanadas.jpeg">
-                <button onclick="agregarAlCarrito('Empanada de Carne', 9)" class="button button1" style="font-size: 1.5em;">Agregar Empanada de Carne</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: empanadas de carne</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: empanada clásica argentina rellena de carne sazonada</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 12000</p>
+                <img src="imagenes/productos/empanadas/empanadas.jpeg ">
+                <button onclick="agregarAlCarrito('empanadas de carne', 12000)" class="button button1" style="font-size: 1.5em;">Agregar empanadas de carne</button>
 
             </div>
 
@@ -248,25 +254,25 @@
 
     <!-- Sección del listado de productos -->
     <div id="sandwichs" class="scroll-section" style="border-style: solid;">
-        <h3>🥖 Sandwichs</h3>
-        <h4>Descubre nuestros deliciosos sandwichs</h4>
-        <p>¡Perfectos para una comida rápida y sabrosa!</p>
+        <h3>🥖sandwichs</h3>
+        <h4>Descubre nuestros deliciosos sandwichs </h4>
+        <p>¡Perfectos para una comida rápida y sabrosa! </p>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Sandwich Jamón y Queso</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Sandwich clásico con jamón, queso y mayonesa, servido en pan tostado</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 7</p>
+                <p style="font-size: 2em; text-align: start;">Nombre: Sandwich Jamón y Queso </p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Sandwich clásico con jamón, queso y mayonesa, servido en pan tostado </p>
+                <p style="font-size: 2em; text-align: start;">Precio: 7000</p>
                 <img src="imagenes/productos/sandwichs/sandwich.jpeg">
-                <button onclick="agregarAlCarrito('Sandwich Jamón y Queso', 7)" class="button button1" style="font-size: 1.5em;">Agregar Sandwich Jamón y Queso</button>
+                <button onclick="agregarAlCarrito('Sandwich Jamón y Queso ', 7000)" class="button button1" style="font-size: 1.5em;">Agregar Sandwich Jamón y Queso </button>
 
             </div>
 
             <div class="producto">
                 <p style="font-size: 2em; text-align: start;">Nombre: Sandwich Vegetariano</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Sandwich saludable con una mezcla de verduras frescas y queso en pan integral</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 6</p>
-                <img src="imagenes/productos/sandwichs/sandwich.jpeg">
-                <button onclick="agregarAlCarrito('Sandwich Vegetariano', 6)" class="button button1" style="font-size: 1.5em;">Agregar Sandwich Vegetariano</button>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Sandwich saludable con una mezcla de verduras frescas y queso en pan integral </p>
+                <p style="font-size: 2em; text-align: start;">Precio: 5000</p>
+                <img src="imagenes/productos/sandwichs/sandwich.jpeg ">
+                <button onclick="agregarAlCarrito('Sandwich Vegetariano', 5000)" class="button button1" style="font-size: 1.5em;">Agregar Sandwich Vegetariano</button>
 
             </div>
 
@@ -276,25 +282,43 @@
 
     <!-- Sección del listado de productos -->
     <div id="gaseosas" class="scroll-section" style="border-style: solid;">
-        <h3>🥤 Gaseosas</h3>
-        <h4>Refresca tu sed con nuestras gaseosas</h4>
-        <p>¡Disfruta de la burbujeante experiencia!</p>
+        <h3>🥤gaseosas</h3>
+        <h4>Refresca tu sed con nuestras gaseosas </h4>
+        <p>¡Disfruta de la burbujeante experiencia! </p>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Coca-Cola</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Refrescante gaseosa con burbujas y sabor inconfundible</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 5</p>
-                <img src="imagenes/productos/gaseosas/coca-cola.jpeg">
-                <button onclick="agregarAlCarrito('Coca-Cola', 5)" class="button button1" style="font-size: 1.5em;">Agregar Coca-Cola</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: coca cola</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Refrescante gaseosa con burbujas y sabor inconfundible </p>
+                <p style="font-size: 2em; text-align: start;">Precio: 2800</p>
+                <img src="imagenes/productos/gaseosas/coca-cola.jpeg ">
+                <button onclick="agregarAlCarrito('coca cola', 2800)" class="button button1" style="font-size: 1.5em;">Agregar coca cola</button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Sprite</p>
+                <p style="font-size: 2em; text-align: start;">Nombre: manaos</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: La elegida por los argentinos</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 1800</p>
+                <img src="imagenes/productos/gaseosas/manaos.jpeg ">
+                <button onclick="agregarAlCarrito('manaos', 1800)" class="button button1" style="font-size: 1.5em;">Agregar manaos</button>
+
+            </div>
+
+            <div class="producto">
+                <p style="font-size: 2em; text-align: start;">Nombre: sprite</p>
                 <p style="font-size: 2em; text-align: start;">Descripcion: Gaseosa lima-limón, refrescante y sin cafeína</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 5</p>
-                <img src="imagenes/productos/gaseosas/coca-cola.jpeg">
-                <button onclick="agregarAlCarrito('Sprite', 5)" class="button button1" style="font-size: 1.5em;">Agregar Sprite</button>
+                <p style="font-size: 2em; text-align: start;">Precio: 2300</p>
+                <img src="imagenes/productos/gaseosas/sprite.jpeg ">
+                <button onclick="agregarAlCarrito('sprite', 2300)" class="button button1" style="font-size: 1.5em;">Agregar sprite</button>
+
+            </div>
+
+            <div class="producto">
+                <p style="font-size: 2em; text-align: start;">Nombre: Agua mineral</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Agua mineral de 2litros</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 1000</p>
+                <img src="imagenes/productos/gaseosas/agua-mineral.jpeg ">
+                <button onclick="agregarAlCarrito('Agua mineral', 1000)" class="button button1" style="font-size: 1.5em;">Agregar Agua mineral</button>
 
             </div>
 
@@ -304,43 +328,71 @@
 
     <!-- Sección del listado de productos -->
     <div id="cervezas" class="scroll-section" style="border-style: solid;">
-        <h3>🍻 Cervezas</h3>
+        <h3>🍻cervezas</h3>
         <h4>Disfruta de una cerveza fría con tus amigos</h4>
-        <p>¡Perfecta para compartir momentos especiales!</p>
+        <p>¡Perfecta para compartir momentos especiales! </p>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Cerveza Quilmes</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Cerveza argentina de excelente calidad y sabor equilibrado</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 7</p>
-                <img src="imagenes/productos/cervezas/cerveza.jpeg">
-                <button onclick="agregarAlCarrito('Cerveza Quilmes', 7)" class="button button1" style="font-size: 1.5em;">Agregar Cerveza Quilmes</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: Quilmes</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: 1.5L Envase retornable</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 1500</p>
+                <img src="imagenes/productos/cervezas/cerveza.jpeg ">
+                <button onclick="agregarAlCarrito('Quilmes', 1500)" class="button button1" style="font-size: 1.5em;">Agregar Quilmes</button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Cerveza Quilmes</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Cerveza argentina de excelente calidad y sabor equilibrado</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 7</p>
-                <img src="imagenes/productos/cervezas/cerveza.jpeg">
-                <button onclick="agregarAlCarrito('Cerveza Quilmes', 7)" class="button button1" style="font-size: 1.5em;">Agregar Cerveza Quilmes</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: Quilmes Lata</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: 0.5L</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 800</p>
+                <img src="imagenes/productos/cervezas/cerveza.jpeg ">
+                <button onclick="agregarAlCarrito('Quilmes Lata', 800)" class="button button1" style="font-size: 1.5em;">Agregar Quilmes Lata</button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Cerveza Quilmes</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Cerveza argentina de excelente calidad y sabor equilibrado</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 7</p>
-                <img src="imagenes/productos/cervezas/cerveza.jpeg">
-                <button onclick="agregarAlCarrito('Cerveza Quilmes', 7)" class="button button1" style="font-size: 1.5em;">Agregar Cerveza Quilmes</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: Brahma</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: 1.5L Envase retornable</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 1500</p>
+                <img src="imagenes/productos/cervezas/cerveza.jpeg ">
+                <button onclick="agregarAlCarrito('Brahma', 1500)" class="button button1" style="font-size: 1.5em;">Agregar Brahma</button>
 
             </div>
 
             <div class="producto">
-                <p style="font-size: 2em; text-align: start;">Nombre: Cerveza Quilmes</p>
-                <p style="font-size: 2em; text-align: start;">Descripcion: Cerveza argentina de excelente calidad y sabor equilibrado</p>
-                <p style="font-size: 2em; text-align: start;">Precio: 7</p>
-                <img src="imagenes/productos/cervezas/cerveza.jpeg">
-                <button onclick="agregarAlCarrito('Cerveza Quilmes', 7)" class="button button1" style="font-size: 1.5em;">Agregar Cerveza Quilmes</button>
+                <p style="font-size: 2em; text-align: start;">Nombre: Brahma lata</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: 0.5L</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 790</p>
+                <img src="imagenes/productos/cervezas/cerveza.jpeg ">
+                <button onclick="agregarAlCarrito('Brahma lata', 790)" class="button button1" style="font-size: 1.5em;">Agregar Brahma lata</button>
+
+            </div>
+
+            <div class="producto">
+                <p style="font-size: 2em; text-align: start;">Nombre: Corona</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: 1.5L Envase retornable</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 3000</p>
+                <img src="imagenes/productos/cervezas/cerveza.jpeg ">
+                <button onclick="agregarAlCarrito('Corona', 3000)" class="button button1" style="font-size: 1.5em;">Agregar Corona</button>
+
+            </div>
+
+    </div>
+    <!-- Fin sección del listado de productos -->
+
+
+    <!-- Sección del listado de productos -->
+    <div id="panchos" class="scroll-section" style="border-style: solid;">
+        <h3>🌭panchos</h3>
+        <h4>gran variedades de panchos</h4>
+        <p>explora</p>
+
+            <div class="producto">
+                <p style="font-size: 2em; text-align: start;">Nombre: pancho clasico</p>
+                <p style="font-size: 2em; text-align: start;">Descripcion: Pancho + aderezos a eleccion</p>
+                <p style="font-size: 2em; text-align: start;">Precio: 1000</p>
+                <img src="nan">
+                <button onclick="agregarAlCarrito('pancho clasico', 1000)" class="button button1" style="font-size: 1.5em;">Agregar pancho clasico</button>
 
             </div>
 
@@ -356,7 +408,6 @@
     
     <!-- FOOTER -->
     
-    <!-- FOOTER -->
     <footer id="footer">
         <!-- Pie de página de tu sitio web aquí -->
         <div class="contenedor">
@@ -368,14 +419,13 @@
                 <div class="separador_box_footer">
                     
         <i class="fa fa-facebook" style="width: 2em;height: 2em;background-color: #3b5998; padding: 1em;"></i>
-        <a href="https://www.facebook.com/pizzeria123213/">Facebook</a>
+        <a href="https://www.facebook.com/pizzeria[NOMBRE]/">Facebook</a>
         
                 </div>
             </div>
             
         </div>
     </footer>
-    <!-- FIN FOOTER -->
     
     <!-- FIN FOOTER -->
     

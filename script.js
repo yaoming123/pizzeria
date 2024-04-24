@@ -2,7 +2,7 @@
 var carrito = [];
 var direccion = "";
 var medioPago = "";
-var numeroWhatsApp = "+541122334455"; // Reemplaza esto con tu número real
+var numeroWhatsApp = "+54111111111"; // Reemplaza esto con tu número real 
 
 // Función para agregar un producto al carrito
 // function agregarAlCarrito(nombre, precio) {
@@ -38,7 +38,6 @@ function agregarAlCarrito(nombre, precio) {
 }
 
 
-
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(id) {
     carrito = carrito.filter(function (producto) {
@@ -69,7 +68,6 @@ function actualizarCarrito() {
     document.getElementById("carrito").innerHTML = carritoHTML;
     document.getElementById("carrito-terminar-pedido").style.display = "block"; // Mostrar el elemento
 }
-
 
 
 // Llamar a actualizarCarrito() cuando se carga la página por primera vez
