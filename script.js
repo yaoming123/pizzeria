@@ -1,19 +1,9 @@
+
 // Array para almacenar los productos en el carrito
 var carrito = [];
 var direccion = "";
 var medioPago = "";
-var numeroWhatsApp = "+54111111111"; // Reemplaza esto con tu número real 
-
-// Función para agregar un producto al carrito
-// function agregarAlCarrito(nombre, precio) {
-//     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
-//     if (!isNaN(cantidad) && cantidad > 0) {
-//         carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
-//         actualizarCarrito();
-//     } else {
-//         alert("La cantidad ingresada no es válida.");
-//     }
-// }
+var numeroWhatsApp = "111111"; // Reemplaza esto con tu número real 
 
 function agregarAlCarrito(nombre, precio) {
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
@@ -91,12 +81,8 @@ function editarProducto(id) {
     }
 }
 
-// Función para solicitar la dirección
-// function solicitarDireccion() {
-//     direccion = prompt("Ingrese la dirección con entre calles:");
-// }
 function solicitarDireccion() {
-    direccion = prompt("Ingrese la Direccion, localidad y entre calles:");
+    direccion = prompt("Ingrese direccion, localidad y entre calles");
     while (direccion === "") {
         direccion = prompt("Por favor, ingrese una dirección válida:");
     }
@@ -136,9 +122,16 @@ function enviarPedido() {
     mensaje += "Dirección: " + direccion + "\n";
     mensaje += "Medio de Pago: " + medioPago + "\n";
 
+    // Calcular el vuelto para poner en el mensaje
+    var total = calcularTotal();
+
     // Agregar detalles adicionales según el medio de pago
     if (medioPago === "Efectivo") {
-        var montoAbonado = prompt("¿Con cuánto va a abonar?");
+        var montoAbonado;
+        do{
+            montoAbonado = parseFloat(prompt("El total es: " + total + "¿Con cuánto va a abonar?"));
+        } while (isNaN(montoAbonado));
+        
         while (montoAbonado === ""){
            montoAbonado = prompt("Por favor, ingrese un monto válido:"); 
         }    
@@ -154,13 +147,14 @@ function enviarPedido() {
     }
 
     // Mensaje final, listo para enviar.
-    var total = calcularTotal();
     var vuelto = montoAbonado - total;
     mensaje += "El Total: " + total + "$\n";
-    mensaje += "El vuelto:" + vuelto + "$\n"
-
-    //  Calcular el vuelto para poner en el mensaje
-
+    //Comprueba que haya un vuelto, si no corresponde no lo muestra en el mensaje
+    if (isNaN(vuelto) == true){
+        vuelto = "";
+    } else{
+        mensaje += "El vuelto:" + vuelto + "$"
+    }
 
     if (mensaje.includes("null")) {
         // Reemplazar "null" por "[COMPLETAR AQUI]"
@@ -170,8 +164,9 @@ function enviarPedido() {
     }
 
     // Construir el enlace para WhatsApp
-    var enlacePedido = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
+    var enlacePedido = "https://wa.me/" + 111111 + "?text=" + encodeURIComponent(mensaje);
 
     // Asignar el enlace al enlace de pedido
     document.getElementById("pedidoLink").href = enlacePedido;
 }
+    

@@ -1,5 +1,4 @@
-
-    :root {
+:root {
     --color1:#ea2f38;
     --color2:black;;
     --color3:white;
@@ -125,6 +124,7 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--color1);
 
+
 }
 
 nav ul li a:active {
@@ -173,6 +173,7 @@ header h2 {
     font-size: 3rem;
     /* color: #fbfbfbc9; */
     /* color: #fa8231; */
+
 }
 
 header p {
@@ -183,7 +184,7 @@ header p {
 
 
 
-/* header de h1 al h6 */
+/* header de h1 al h6{} */
 
 main {
     background-color: var(--color2);
@@ -191,6 +192,7 @@ main {
     text-align: center;
     font-variant: all-petite-caps;
     padding-bottom: 2em;
+
 }
 
 #productos {
@@ -461,6 +463,29 @@ footer a {
     color: black;
 }
 
+/* Boton de ir al pie de la pagina */
+/* .button-flotante { */
+    /* border: 0.2em solid var(--rojo); */
+    /* position: fixed; */
+    /* bottom: 20px; */
+    /* right: 20px; */
+    /* background-color: var(--color1); */
+    /* color: #fff; */
+    /* padding: 10px 20px; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    /* border-radius: 5px; */
+    /* border-radius: 0.4em; */
+    /* text-decoration: none; */
+    /* margin-bottom: -10px; */
+
+    /* height: 21%; */
+    /* width: 10%; */
+    /* background-image: url(./anadir-al-carrito.png);
+    background-repeat: no-repeat;
+    background-size: contain; */
+/* } */
+
 .button-flotante {
     /* border: 0.2em solid var(--rojo); */
     position: fixed;
@@ -546,4 +571,3 @@ footer a {
         width: 100%;
     }
 }
-    
