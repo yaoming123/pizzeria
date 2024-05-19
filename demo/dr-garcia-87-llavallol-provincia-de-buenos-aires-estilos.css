@@ -1,11 +1,9 @@
-
-    :root {
+:root {
     --color1:black;
     --color2:#0c419c;;
     --color3:white;
 
     --texto:var(--color3); 
-;
     /* --color3:white;
     --color3:white;
     --color3:white;
