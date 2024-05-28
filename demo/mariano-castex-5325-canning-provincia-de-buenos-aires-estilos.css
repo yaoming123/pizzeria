@@ -374,6 +374,7 @@ footer a {
 
 .box_logo img {
     height: 150px;
+    max-width: 50%;
 }
 
 .box_footer {
