@@ -374,7 +374,7 @@ footer a {
 
 .box_logo img {
     height: 150px;
-    max-width: 50%;
+    max-width: 30%;
 }
 
 .box_footer {
@@ -457,6 +457,7 @@ footer a {
 }
 
 .button-flotante {
+    border-style: outset;
     /* border: 0.2em solid var(--rojo); */
     position: fixed;
     bottom: 2%;
