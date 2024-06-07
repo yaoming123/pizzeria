@@ -1,18 +1,16 @@
 
 :root {
-    --color1:#ea2f38;
-    --color2:black;;
-    --color3:white;
-
-    --texto:#ffd402; 
-;
+    --color1: #c22f31;
+    --color2: #c0312b;
+    --color3: white;
+    --texto: #fbfbfb;
 }
 
 .message {
     font-size: 1em;
     text-align: center;
     background-color: var(--color2);
-    
+    /* color: white; */
 }
 
 .scroll-section {
@@ -248,12 +246,10 @@ h3 {
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin: 1em;
-    width: 22em;
+    width: 18em;
     margin-bottom: 1em;
-    margin-right: auto;
-    margin-left: auto;
 }
   
 .producto img{
@@ -378,6 +374,7 @@ footer a {
 
 .box_logo img {
     height: 150px;
+    max-width: 30%;
 }
 
 .box_footer {
@@ -460,6 +457,7 @@ footer a {
 }
 
 .button-flotante {
+    border-style: outset;
     /* border: 0.2em solid var(--rojo); */
     position: fixed;
     bottom: 2%;
@@ -545,3 +543,12 @@ footer a {
     }
 }
     
+
+
+.fondo_cuadrados {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><rect width="25" height="25" fill="black"/><rect x="25" y="25" width="25" height="25" fill="black"/></svg>');
+    background-size: 50px 50px; /* Tamaño de los cuadrados */
+}
