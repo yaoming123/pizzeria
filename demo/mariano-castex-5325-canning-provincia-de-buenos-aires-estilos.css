@@ -222,6 +222,8 @@ h3 {
     background-color: #ffffff;
     color: black;
     font-family: 'Bebas Neue';
+    margin-top: 1em;
+    padding-top: 1em;
 }
 
 #productos .button1:hover {
