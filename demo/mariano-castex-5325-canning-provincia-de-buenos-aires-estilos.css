@@ -1,9 +1,10 @@
 
 :root {
-    --color1: #c22f31;
-    --color2: #c0312b;
-    --color3: white;
-    --texto: #fbfbfb;
+    --color1:#ea2f38;
+    --color2:black;;
+    --color3:white;
+
+    --texto:#ffd402; 
 ;
 }
 
@@ -222,8 +223,6 @@ h3 {
     background-color: #ffffff;
     color: black;
     font-family: 'Bebas Neue';
-    margin-top: 1em;
-    padding-top: 1em;
 }
 
 #productos .button1:hover {
@@ -249,12 +248,10 @@ h3 {
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin: 1em;
-    width: 22em;
+    width: 18em;
     margin-bottom: 1em;
-    margin-right: auto;
-    margin-left: auto;
 }
   
 .producto img{
@@ -379,7 +376,6 @@ footer a {
 
 .box_logo img {
     height: 150px;
-    width: 40%;
 }
 
 .box_footer {
