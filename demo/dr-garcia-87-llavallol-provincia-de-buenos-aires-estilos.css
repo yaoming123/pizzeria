@@ -224,6 +224,8 @@ h3 {
 #productos .button1:hover {
     background-color: var(--color1);
     color: white;
+    border-style: solid;
+    border-color: var(--color3);
 }
 
 .servicio {
@@ -469,6 +471,7 @@ footer a {
     /* border-radius: 0.4em; */
     text-decoration: none;
     margin-bottom: -10px;
+    border-style: solid;
 }
 
 
