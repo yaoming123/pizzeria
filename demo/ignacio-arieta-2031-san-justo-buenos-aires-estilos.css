@@ -1,10 +1,11 @@
 
-:root {
-    --color1:#f67f1c;
+    :root {
+    --color1:#ea2f38;
     --color2:black;;
     --color3:white;
 
-    --texto:#f67f1c; 
+    --texto:#ffd402; 
+;
 }
 
 .message {

@@ -1,20 +1,14 @@
 :root {
-    --color1:black;
-    --color2:#0c419c;;
-    --color3:white;
-
-    --texto:var(--color3); 
-    /* --color3:white;
-    --color3:white;
-    --color3:white;
-    --color3:white; */
+    --color1: black;
+    --color2: black;
+    --color3: white;
+    --texto: white;
 }
-
 .message {
     font-size: 1em;
     text-align: center;
     background-color: var(--color2);
-    /* color: white; */
+    
 }
 
 .scroll-section {
@@ -254,6 +248,8 @@ h3 {
     margin: 1em;
     width: 18em;
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
   
 .producto img{
