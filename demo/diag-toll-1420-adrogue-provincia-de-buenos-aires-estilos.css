@@ -8,7 +8,7 @@
 
 .message {
     /* font-size: 1em; */
-    font-size: xx-small;;
+    font-size: xx-small;
     text-align: center;
     background-color: var(--color2);
 }
