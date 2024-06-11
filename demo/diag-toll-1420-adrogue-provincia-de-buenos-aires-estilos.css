@@ -7,7 +7,8 @@
 }
 
 .message {
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: xx-small;;
     text-align: center;
     background-color: var(--color2);
 }
@@ -94,11 +95,11 @@ nav {
     /* font-weight: bold; */
 }
 
-nav ul {
-    list-style: none;
+/* nav ul { */
+    /* list-style: none; */
     /* margin: 0;
     padding: 0; */
-}
+/* } */
 
 nav li {
     display: inline-block;
@@ -115,6 +116,7 @@ nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* font-size: 0.5em; */
+    font-size: medium;
 }
 
 nav ul li a:hover {
@@ -160,8 +162,8 @@ header {
 
 
 header h1 {
-    font-size: 7rem;
-    /* color: #FFF; */
+    /* font-size: 7rem */
+    font-size: xxx-large;
 }
 
 header h2 {
@@ -171,8 +173,7 @@ header h2 {
 }
 
 header p {
-    font-size: 3rem;
-    /* color: #ffffffe3; */
+    font-size: larger;
     column-count: 1;
 }
 
@@ -191,16 +192,18 @@ main {
     margin-top: auto;
 }
 
-
-#productos h1,
-h3 {
+/* estaba asi h1, h3 */
+#productos h3 {
+    font-size: xxx-large;
     /* font-size: 4rem; */
     padding: initial;
-    font-size: 8rem;
+
+
 }
 
 #productos h2 {
-    font-size: 7rem;
+    /* font-size: 7rem; */
+    font-size:xxx-large;
 }
 
 #productos h4 {
@@ -209,7 +212,8 @@ h3 {
 }
 
 #productos p {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: large;
 }
 
 
@@ -259,12 +263,14 @@ h3 {
 /* Seccion contacto */
 
 #contacto h3 {
-    font-size: 7rem;
+    font-size:xxx-large;
+    /* font-size: 7rem; */
     /* color: white; */
 }
 
 #contacto h4 {
-    font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: larger;
     column-count: 1;
 }
 
@@ -431,7 +437,7 @@ footer a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    /* font-size: 25px;  */
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
