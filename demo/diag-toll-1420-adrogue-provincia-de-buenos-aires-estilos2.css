@@ -1,7 +1,8 @@
+
 :root {
-    --color1: #ea2f38;
+    --color1:#ea2f38;
     --color2: #000000e3;
-    --color3: white;
+    --color3:white;
     --texto: var(--color3);
 }
 
@@ -10,10 +11,6 @@
     font-size: large;
     text-align: center;
     background-color: var(--color2);
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
 }
 
 .scroll-section {
@@ -74,15 +71,6 @@ html {
     scroll-behavior: smooth;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
-    /* Nuevo contenido de prueba */
-    background-size: 50px 50px;
-    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(-45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ff0000 75%),
-        linear-gradient(-45deg, transparent 75%, #ff0000 75%);
-    background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
-
-
 }
 
 body {
@@ -92,7 +80,6 @@ body {
     color: white; */
     color: var(--texto);
     background-size: 6em;
-
 }
 
 /* NAV */
@@ -109,17 +96,13 @@ nav {
 }
 
 /* nav ul { */
-/* list-style: none; */
-/* margin: 0;
+    /* list-style: none; */
+    /* margin: 0;
     padding: 0; */
 /* } */
 
 nav li {
-    height: 28px;
     display: inline-block;
-    /* background: cadetblue; */
-    /* margin-bottom: 1em; */
-    padding-top: 2px;
 }
 
 a {
@@ -128,12 +111,12 @@ a {
 
 nav ul li a {
     color: black;
-    /* display: inline-block; */
+    display: inline-block;
+    padding: 0.5em;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* font-size: 0.5em; */
     font-size: medium;
-    font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -220,7 +203,7 @@ main {
 
 #productos h2 {
     /* font-size: 7rem; */
-    font-size: xxx-large;
+    font-size:xxx-large;
 }
 
 #productos h4 {
@@ -255,7 +238,6 @@ main {
     margin: 0 auto;
     max-width: 1200px;
 }
-
 .producto {
     border-style: solid;
     display: inline-block;
@@ -271,12 +253,11 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
-.producto:hover {
+.producto:hover{
     background-color: black;
 }
-
-.producto img {
+  
+.producto img{
     width: 10em;
     height: 10em;
     float: none;
@@ -285,7 +266,7 @@ main {
 /* Seccion contacto */
 
 #contacto h3 {
-    font-size: xxx-large;
+    font-size:xxx-large;
     /* font-size: 7rem; */
     /* color: white; */
 }
@@ -323,7 +304,7 @@ main {
 
 }
 
-#container-carrito {
+#container-carrito{
     margin-top: auto;
     /* background-color: var(--color2); */
     padding-bottom: 5em;
@@ -336,22 +317,19 @@ main {
     color: black;
     border-radius: 0.4em;
 }
-
 #container-carrito .button1:hover {
     background-color: var(--color1);
     color: white;
 }
 
-#carrito {
+#carrito{
     font-size: 2em;
     padding-bottom: 2em;
 }
-
-#carrito li {
+#carrito li{
     list-style: none;
     border-style: solid;
 }
-
 #carrito ul li .button1 {
     width: 30%;
     margin: 0.5em;
@@ -359,7 +337,6 @@ main {
     color: black;
     border-radius: 0.4em;
 }
-
 #carrito ul li .button1:hover {
     background-color: var(--color1);
     color: white;
@@ -394,10 +371,6 @@ footer a {
     padding: 0;
     margin: 0;
     background-color: var(--color2);
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
 }
 
 .box_logo p {
@@ -408,7 +381,6 @@ footer a {
 
 .box_logo img {
     height: 150px;
-    animation: rotar 11s linear infinite;
 }
 
 .box_footer {
@@ -519,34 +491,22 @@ footer a {
 
 @media screen and (max-width:449px) {
 
-    .box_footer {
+    .box_footer{
         width: min-content;
     }
-
-    .separador_box_footer {
+    .separador_box_footer{
         width: 100%;
     }
 }
-
+    
 
 .mantel {
     width: 100%;
     height: 100%;
     background-size: 50px 50px;
-    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(-45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ff0000 75%),
-        linear-gradient(-45deg, transparent 75%, #ff0000 75%);
+    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%), 
+                      linear-gradient(-45deg, #ff0000 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #ff0000 75%), 
+                      linear-gradient(-45deg, transparent 75%, #ff0000 75%);
     background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
-}
-
-
-/* /* animation: rotar 5s linear infinite;  */
-@keyframes rotar {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
