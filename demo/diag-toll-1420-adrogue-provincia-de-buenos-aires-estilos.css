@@ -473,6 +473,7 @@ footer a {
     cursor: pointer;
     font-variant: normal;
     text-transform: uppercase;
+    font-family: fantasy;
 }
 
 .button1 {
