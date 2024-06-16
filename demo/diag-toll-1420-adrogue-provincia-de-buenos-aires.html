@@ -1,4 +1,6 @@
-<html lang="es"><!-- HEAD CONTENT -->
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD CONTENT -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="pizzeria.net.ar">
 
-    <link rel="icon" type="image/x-icon" href="diag-toll-1420-adrogue-provincia-de-buenos-aires/logo.jpg">
+    <link rel="icon" type="image/x-icon" href=diag-toll-1420-adrogue-provincia-de-buenos-aires/logo.png>
     <title>Ti Amo Pizzería</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,9 +20,9 @@
     <link rel="stylesheet" href="diag-toll-1420-adrogue-provincia-de-buenos-aires-estilos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 
 
@@ -31,24 +33,24 @@
     <meta property="og:image" content="diag-toll-1420-adrogue-provincia-de-buenos-aires/logo.png">
     <meta property="og:url" content="https://www.pizzeria.net.ar">
 
-    <script src="diag-toll-1420-adrogue-provincia-de-buenos-aires.js" defer=""></script>
+    <script src="diag-toll-1420-adrogue-provincia-de-buenos-aires.js" defer></script>
     <script type="application/ld+json">
-        {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Ti amo Pizzería",
-        "url": "https://www.pizzeria.net.ar",
-        "logo": "diag-toll-1420-adrogue-provincia-de-buenos-aires/logo.png",
-        "contactPoint": [{
-            "@type": "ContactPoint",
-            "telephone": "1139343245",
-            "contactType": "Ti amo Pizzería"
-        }]
-        }
-    </script>
+    {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Ti amo Pizzería",
+    "url": "https://www.pizzeria.net.ar",
+    "logo": "diag-toll-1420-adrogue-provincia-de-buenos-aires/logo.png",
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "1139343245",
+        "contactType": "Ti amo Pizzería"
+    }]
+    }
+</script>
 
     <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -75,9 +77,9 @@
         <a href="https://maps.app.goo.gl/WjTvA4jicpE19tLA8" class="back-button">Diag. Toll 1420, Adrogué, Provincia de
             Buenos Aires</a>
     </p>
-    <!-- <p class="message">VERSION DEMO DE PIZZERIA.NET.AR | WEB SENCILLA + PRODUCTOS PARA TU NEGOCIO
+    <p class="message">VERSION DEMO DE PIZZERIA.NET.AR | WEB SENCILLA + PRODUCTOS PARA TU NEGOCIO
         <a href="https://www.facebook.com/pizzeria.net.ar/" class="back-button">👉🏻SOLICITAR AQUI👈🏻</a>
-    </p> -->
+    </p>
     <!-- END MESSAGE IMPORTANT -->
 
     <!-- End message in top page -->
@@ -97,9 +99,8 @@
     <nav>
         <ul>
 
-            <li style="background-color: var(--color1);">
-                <a href="#contacto"
-                    style="/* margin-top: auto; *//* margin-bottom: auto; *//* background-color: var(--color1); */color:white;">contacto</a>
+            <li>
+                <a href="#contacto" style="background-color: var(--color1); color:white;">contacto</a>
             </li>
 
             <li>
@@ -144,7 +145,7 @@
             <h1>Bienvenidos a nuestro sitio web </h1>
             <p>Encuentre aquí lo que necesite,</p>
 
-            <p>No olvide visitarnos.</p>
+            <p>No olvide visitarnos. </p>
             <!-- </div> -->
 
             <!-- Seccion Contacto -->
@@ -203,10 +204,8 @@
 
                 <div id="container-carrito">
                     <h2>Carrito</h2>
-                    <div id="carrito">
-                        <p>El carrito está vacío, mire <a href="#titulo-productos">Nuestros productos.</a></p>
-                    </div>
-                    <div id="carrito-terminar-pedido" style="display: none;">
+                    <div id="carrito"></div>
+                    <div id="carrito-terminar-pedido">
                         <p>Antes de seguir, revise que el pedido sea el deseado y complete los siguientes datos</p>
                         <button class="button button1" onclick="solicitarDireccion()"
                             style="font-family: 'Bebas Neue';">Ingresar Dirección</button>
@@ -232,7 +231,7 @@
 
                 <!-- Sección del listado de productos -->
                 <div id="categoria-1" class="scroll-section" style="border-style: solid;">
-                    <h3>🍕<br>categoria 1</h3>
+                    <h3>🍕categoria 1</h3>
 
 
 
@@ -552,8 +551,6 @@
     </footer>
 
     <!-- FIN FOOTER -->
-
-
 
 </body>
 
