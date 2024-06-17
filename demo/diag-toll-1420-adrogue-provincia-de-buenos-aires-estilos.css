@@ -331,8 +331,9 @@ main {
 #container-carrito {
     margin-top: auto;
     /* background-color: var(--color2); */
-    padding-bottom: 5em;
+    /* padding-bottom: 5em; */
     border-style: solid;
+    padding: inherit;
 }
 
 #container-carrito .button1 {
