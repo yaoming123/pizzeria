@@ -283,6 +283,12 @@ main {
 
 /* Seccion contacto */
 
+#contacto {
+    /* text-align: center;   */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #contacto h3 {
     font-size: xxx-large;
     /* font-size: 7rem; */
