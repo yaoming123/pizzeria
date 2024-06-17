@@ -3,7 +3,7 @@
 var carrito = [];
 var direccion = "";
 var medioPago = "";
-var numeroWhatsApp = "1139343245"; // 
+var numeroWhatsApp = "1539343245"; // 
 
 function agregarAlCarrito(nombre, precio) {
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
@@ -164,7 +164,7 @@ function enviarPedido() {
     }
 
     // Construir el enlace para WhatsApp
-    var enlacePedido = "https://wa.me/" + 1139343245 + "?text=" + encodeURIComponent(mensaje);
+    var enlacePedido = "https://wa.me/" + 1539343245 + "?text=" + encodeURIComponent(mensaje);
 
     // Asignar el enlace al enlace de pedido
     document.getElementById("pedidoLink").href = enlacePedido;
