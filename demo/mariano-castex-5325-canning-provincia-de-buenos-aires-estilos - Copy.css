@@ -1,9 +1,10 @@
 :root {
-    --color1: black;
-    --color2: black;
+    --color1: #c03026;
+    --color2: #c03026;
     --color3: white;
     --texto: white;
 }
+
 .message {
     font-size: 1em;
     text-align: center;
@@ -224,6 +225,7 @@ h3 {
 #productos .button1:hover {
     background-color: var(--color1);
     color: white;
+    border-style: solid;
 }
 
 .servicio {
@@ -469,6 +471,7 @@ footer a {
     /* border-radius: 0.4em; */
     text-decoration: none;
     margin-bottom: -10px;
+    border-style: solid;
 }
 
 

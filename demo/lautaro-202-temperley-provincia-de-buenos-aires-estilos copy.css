@@ -1,14 +1,15 @@
+
 :root {
-    --color1: black;
-    --color2: black;
+    --color1: #e32128;
+    --color2: #00000003;
     --color3: white;
-    --texto: white;
+    --texto: #e32128;
 }
 .message {
     font-size: 1em;
     text-align: center;
     background-color: var(--color2);
-    
+    /* color: white; */
 }
 
 .scroll-section {
@@ -248,8 +249,6 @@ h3 {
     margin: 1em;
     width: 18em;
     margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
 }
   
 .producto img{
@@ -369,7 +368,7 @@ footer a {
 .box_logo p {
     /* font-size: x-large; */
     font-size: 3rem;
-    color: black;
+    /* color: black; */
 }
 
 .box_logo img {

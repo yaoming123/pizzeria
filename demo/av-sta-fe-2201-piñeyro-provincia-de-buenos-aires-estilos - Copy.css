@@ -1,16 +1,17 @@
 
 :root {
-    --color1:#ea2f38;
-    --color2: #000000e3;
+    --color1:#f67f1c;
+    --color2:black;;
     --color3:white;
-    --texto: var(--color3);
+
+    --texto:#f67f1c; 
 }
 
 .message {
-    /* font-size: 1em; */
-    font-size: large;
+    font-size: 1em;
     text-align: center;
     background-color: var(--color2);
+    
 }
 
 .scroll-section {
@@ -69,8 +70,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Bebas Neue';
 }
 
 body {
@@ -89,17 +89,16 @@ nav {
     top: 0;
     text-align: center;
     z-index: 1;
-    width: 100%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
-    /* font-weight: bold; */
 }
 
-/* nav ul { */
-    /* list-style: none; */
+nav ul {
+    list-style: none;
     /* margin: 0;
     padding: 0; */
-/* } */
+}
 
 nav li {
     display: inline-block;
@@ -116,7 +115,6 @@ nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* font-size: 0.5em; */
-    font-size: medium;
 }
 
 nav ul li a:hover {
@@ -145,7 +143,7 @@ nav ul li a.active::before {
 }
 
 header {
-    /* background-color: var(--color2); */
+    background-color: var(--color2);
     text-align: center;
     font-variant: all-petite-caps;
 }
@@ -162,8 +160,8 @@ header {
 
 
 header h1 {
-    /* font-size: 7rem */
-    font-size: xxx-large;
+    font-size: 7rem;
+    /* color: #FFF; */
 }
 
 header h2 {
@@ -173,7 +171,8 @@ header h2 {
 }
 
 header p {
-    font-size: larger;
+    font-size: 3rem;
+    /* color: #ffffffe3; */
     column-count: 1;
 }
 
@@ -182,6 +181,7 @@ header p {
 /* header de h1 al h6 */
 
 main {
+    background-color: var(--color2);
     height: auto;
     text-align: center;
     font-variant: all-petite-caps;
@@ -190,20 +190,21 @@ main {
 
 #productos {
     margin-top: auto;
+    /* padding-top: 5em;
+    padding-bottom: 5em; */
+    background-color: var(--color2);
 }
 
-/* estaba asi h1, h3 */
-#productos h3 {
-    font-size: xxx-large;
+
+#productos h1,
+h3 {
     /* font-size: 4rem; */
     padding: initial;
-
-
+    font-size: 8rem;
 }
 
 #productos h2 {
-    /* font-size: 7rem; */
-    font-size:xxx-large;
+    font-size: 7rem;
 }
 
 #productos h4 {
@@ -212,8 +213,7 @@ main {
 }
 
 #productos p {
-    /* font-size: 3.5rem; */
-    font-size: large;
+    font-size: 3.5rem;
 }
 
 
@@ -221,6 +221,7 @@ main {
     width: 100%;
     background-color: #ffffff;
     color: black;
+    font-family: 'Bebas Neue';
 }
 
 #productos .button1:hover {
@@ -253,9 +254,6 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-.producto:hover{
-    background-color: black;
-}
   
 .producto img{
     width: 10em;
@@ -266,14 +264,12 @@ main {
 /* Seccion contacto */
 
 #contacto h3 {
-    font-size:xxx-large;
-    /* font-size: 7rem; */
+    font-size: 7rem;
     /* color: white; */
 }
 
 #contacto h4 {
-    /* font-size: 3rem; */
-    font-size: larger;
+    font-size: 3rem;
     column-count: 1;
 }
 
@@ -306,7 +302,7 @@ main {
 
 #container-carrito{
     margin-top: auto;
-    /* background-color: var(--color2); */
+    background-color: var(--color2);
     padding-bottom: 5em;
     border-style: solid;
 }
@@ -370,13 +366,13 @@ footer a {
     text-align: center;
     padding: 0;
     margin: 0;
-    background-color: var(--color2);
+    background-color: white;
 }
 
 .box_logo p {
     /* font-size: x-large; */
     font-size: 3rem;
-    /* color: black; */
+    color: black;
 }
 
 .box_logo img {
@@ -440,13 +436,11 @@ footer a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 25px;  */
+    font-size: 25px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
     font-variant: normal;
-    font-family: fantasy;
-    text-transform: uppercase;
 }
 
 .button1 {
@@ -489,6 +483,57 @@ footer a {
     margin-left: 0.5em;
 }
 
+/* Fonts */
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-regular {
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-bold {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
 @media screen and (max-width:449px) {
 
     .box_footer{
@@ -499,14 +544,3 @@ footer a {
     }
 }
     
-
-.mantel {
-    width: 100%;
-    height: 100%;
-    background-size: 50px 50px;
-    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%), 
-                      linear-gradient(-45deg, #ff0000 25%, transparent 25%), 
-                      linear-gradient(45deg, transparent 75%, #ff0000 75%), 
-                      linear-gradient(-45deg, transparent 75%, #ff0000 75%);
-    background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
-}

@@ -1,9 +1,12 @@
+
+
 :root {
-    --color1: black;
-    --color2: black;
+    --color1: #ca1320;
+    --color2: #ca1320;
     --color3: white;
     --texto: white;
 }
+
 .message {
     font-size: 1em;
     text-align: center;
@@ -219,6 +222,7 @@ h3 {
     background-color: #ffffff;
     color: black;
     font-family: 'Bebas Neue';
+    border-style: solid;
 }
 
 #productos .button1:hover {
@@ -465,10 +469,9 @@ footer a {
     padding: 0.6em 0.6em;
     font-size: 2em;
     cursor: pointer;
-    /* border-radius: 5px; */
-    /* border-radius: 0.4em; */
     text-decoration: none;
     margin-bottom: -10px;
+    border-style: solid;
 }
 
 

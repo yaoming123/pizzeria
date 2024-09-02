@@ -1,9 +1,11 @@
 :root {
-    --color1: black;
-    --color2: black;
-    --color3: white;
-    --texto: white;
+    --color1:#7ecb08;
+    --color2:black;;
+    --color3:white;
+
+    --texto:var(--color3); 
 }
+
 .message {
     font-size: 1em;
     text-align: center;

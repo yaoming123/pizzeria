@@ -1,9 +1,13 @@
-:root {
-    --color1: black;
-    --color2: black;
-    --color3: white;
-    --texto: white;
+
+    :root {
+    --color1:#ea2f38;
+    --color2:black;;
+    --color3:white;
+
+    --texto:#ffd402; 
+;
 }
+
 .message {
     font-size: 1em;
     text-align: center;

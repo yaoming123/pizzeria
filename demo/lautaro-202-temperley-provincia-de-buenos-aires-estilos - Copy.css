@@ -1,9 +1,10 @@
 :root {
-    --color1: black;
-    --color2: black;
+    --color1: #e32128;
+    --color2: #00000003;
     --color3: white;
-    --texto: white;
+    --texto: #e32128;
 }
+
 .message {
     font-size: 1em;
     text-align: center;
@@ -219,6 +220,7 @@ h3 {
     background-color: #ffffff;
     color: black;
     font-family: 'Bebas Neue';
+    border-style: solid;
 }
 
 #productos .button1:hover {

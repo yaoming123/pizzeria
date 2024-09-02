@@ -1,19 +1,16 @@
+
 :root {
-    --color1: #ea2f38;
-    --color2: #000000e3;
+    --color1: #c22f31;
+    --color2: #c0312b;
     --color3: white;
-    --texto: var(--color3);
+    --texto: #fbfbfb;
 }
 
 .message {
-    /* font-size: 1em; */
-    font-size: large;
+    font-size: 1em;
     text-align: center;
     background-color: var(--color2);
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+    /* color: white; */
 }
 
 .scroll-section {
@@ -72,17 +69,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    /* Nuevo contenido de prueba */
-    background-size: 50px 50px;
-    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(-45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ff0000 75%),
-        linear-gradient(-45deg, transparent 75%, #ff0000 75%);
-    background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
-
-
+    font-family: 'Bebas Neue';
 }
 
 body {
@@ -101,24 +88,19 @@ nav {
     top: 0;
     text-align: center;
     z-index: 1;
-    width: 100%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
-    /* font-weight: bold; */
 }
 
-/* nav ul { */
-/* list-style: none; */
-/* margin: 0;
+nav ul {
+    list-style: none;
+    /* margin: 0;
     padding: 0; */
-/* } */
+}
 
 nav li {
-    height: 28px;
     display: inline-block;
-    /* background: cadetblue; */
-    /* margin-bottom: 1em; */
-    padding-top: 2px;
 }
 
 a {
@@ -127,12 +109,11 @@ a {
 
 nav ul li a {
     color: black;
-    /* display: inline-block; */
+    display: inline-block;
+    padding: 0.5em;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* font-size: 0.5em; */
-    font-size: medium;
-    font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -161,7 +142,7 @@ nav ul li a.active::before {
 }
 
 header {
-    /* background-color: var(--color2); */
+    background-color: var(--color2);
     text-align: center;
     font-variant: all-petite-caps;
 }
@@ -178,8 +159,8 @@ header {
 
 
 header h1 {
-    /* font-size: 7rem */
-    font-size: xxx-large;
+    font-size: 7rem;
+    /* color: #FFF; */
 }
 
 header h2 {
@@ -189,7 +170,8 @@ header h2 {
 }
 
 header p {
-    font-size: larger;
+    font-size: 3rem;
+    /* color: #ffffffe3; */
     column-count: 1;
 }
 
@@ -198,6 +180,7 @@ header p {
 /* header de h1 al h6 */
 
 main {
+    background-color: var(--color2);
     height: auto;
     text-align: center;
     font-variant: all-petite-caps;
@@ -206,20 +189,21 @@ main {
 
 #productos {
     margin-top: auto;
+    /* padding-top: 5em;
+    padding-bottom: 5em; */
+    background-color: var(--color2);
 }
 
-/* estaba asi h1, h3 */
-#productos h3 {
-    font-size: xxx-large;
+
+#productos h1,
+h3 {
     /* font-size: 4rem; */
     padding: initial;
-
-
+    font-size: 8rem;
 }
 
 #productos h2 {
-    /* font-size: 7rem; */
-    font-size: xxx-large;
+    font-size: 7rem;
 }
 
 #productos h4 {
@@ -228,8 +212,7 @@ main {
 }
 
 #productos p {
-    /* font-size: 3.5rem; */
-    font-size: large;
+    font-size: 3.5rem;
 }
 
 
@@ -237,6 +220,7 @@ main {
     width: 100%;
     background-color: #ffffff;
     color: black;
+    font-family: 'Bebas Neue';
 }
 
 #productos .button1:hover {
@@ -254,7 +238,6 @@ main {
     margin: 0 auto;
     max-width: 1200px;
 }
-
 .producto {
     border-style: solid;
     display: inline-block;
@@ -267,15 +250,9 @@ main {
     margin: 1em;
     width: 18em;
     margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
 }
-
-.producto:hover {
-    background-color: black;
-}
-
-.producto img {
+  
+.producto img{
     width: 10em;
     height: 10em;
     float: none;
@@ -283,21 +260,13 @@ main {
 
 /* Seccion contacto */
 
-#contacto {
-    text-align: center;  
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #contacto h3 {
-    font-size: xxx-large;
-    /* font-size: 7rem; */
+    font-size: 7rem;
     /* color: white; */
 }
 
 #contacto h4 {
-    /* font-size: 3rem; */
-    font-size: larger;
+    font-size: 3rem;
     column-count: 1;
 }
 
@@ -328,12 +297,11 @@ main {
 
 }
 
-#container-carrito {
+#container-carrito{
     margin-top: auto;
-    /* background-color: var(--color2); */
-    /* padding-bottom: 5em; */
+    background-color: var(--color2);
+    padding-bottom: 5em;
     border-style: solid;
-    padding: inherit;
 }
 
 #container-carrito .button1 {
@@ -342,22 +310,19 @@ main {
     color: black;
     border-radius: 0.4em;
 }
-
 #container-carrito .button1:hover {
     background-color: var(--color1);
     color: white;
 }
 
-#carrito {
+#carrito{
     font-size: 2em;
     padding-bottom: 2em;
 }
-
-#carrito li {
+#carrito li{
     list-style: none;
     border-style: solid;
 }
-
 #carrito ul li .button1 {
     width: 30%;
     margin: 0.5em;
@@ -365,7 +330,6 @@ main {
     color: black;
     border-radius: 0.4em;
 }
-
 #carrito ul li .button1:hover {
     background-color: var(--color1);
     color: white;
@@ -399,22 +363,18 @@ footer a {
     text-align: center;
     padding: 0;
     margin: 0;
-    background-color: var(--color2);
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+    background-color: white;
 }
 
 .box_logo p {
     /* font-size: x-large; */
     font-size: 3rem;
-    /* color: black; */
+    color: black;
 }
 
 .box_logo img {
     height: 150px;
-    animation: rotar 11s linear infinite;
+    max-width: 30%;
 }
 
 .box_footer {
@@ -474,13 +434,11 @@ footer a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 25px;  */
+    font-size: 25px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
     font-variant: normal;
-    text-transform: uppercase;
-    font-weight: bolder;
 }
 
 .button1 {
@@ -499,6 +457,7 @@ footer a {
 }
 
 .button-flotante {
+    border-style: outset;
     /* border: 0.2em solid var(--rojo); */
     position: fixed;
     bottom: 2%;
@@ -523,36 +482,73 @@ footer a {
     margin-left: 0.5em;
 }
 
+/* Fonts */
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-regular {
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tangerine-bold {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
 @media screen and (max-width:449px) {
 
-    .box_footer {
+    .box_footer{
         width: min-content;
     }
-
-    .separador_box_footer {
+    .separador_box_footer{
         width: 100%;
     }
 }
+    
 
 
-.mantel {
-    width: 100%;
-    height: 100%;
-    background-size: 50px 50px;
-    background-image: linear-gradient(45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(-45deg, #ff0000 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ff0000 75%),
-        linear-gradient(-45deg, transparent 75%, #ff0000 75%);
-    background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
-}
-
-
-/* /* animation: rotar 5s linear infinite;  */
-@keyframes rotar {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.fondo_cuadrados {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><rect width="25" height="25" fill="black"/><rect x="25" y="25" width="25" height="25" fill="black"/></svg>');
+    background-size: 50px 50px; /* Tamaño de los cuadrados */
 }
