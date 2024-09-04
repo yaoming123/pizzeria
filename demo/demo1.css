@@ -581,7 +581,7 @@ nav.active ul {
     display: block; /* Para dispositivos pequeños */
 }
 
-/* Media Queries para menú en dispositivos pequeños m-w 480px */
+/* Media Queries para menú en dispositivos pequeños */
 @media screen and (max-width: 836px) {
     nav ul {
         display: none; /* Oculta el menú inicialmente */
