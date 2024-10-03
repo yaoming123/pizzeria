@@ -442,7 +442,7 @@ footer a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    /* font-size: 25px; */
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -565,7 +565,6 @@ footer a {
         text-align: center;
         cursor: pointer;
         padding: 1rem;
-        background-color: #528fd8;
     }
 
     nav.active ul {
