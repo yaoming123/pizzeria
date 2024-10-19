@@ -34,30 +34,6 @@
 
 }
 
-.animation_back_in_rigth {
-    display: inline-block;
-    margin: 0 0.5rem;
-
-    animation: slideInRight;
-    /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-    /* don't forget to set a duration! */
-    /* animation-iteration-count: infinite; */
-
-}
-
-.animation_bounce {
-    display: inline-block;
-    margin: 0 0.5rem;
-
-    animation: bounce;
-    /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-    /* don't forget to set a duration! */
-    /* animation-iteration-count: infinite; */
-
-}
-
 .responsive-iframe {
     width: 90%;
     padding: 1em;
@@ -600,3 +576,20 @@ footer a {
         padding: 8px 16px;
     }
 }
+
+@keyframes titilar {
+    0% {
+      background-color: #ea2f38; /* Rojo inicial */
+    }
+    50% {
+      background-color: var(--texto); /* Color alternativo */
+    }
+    100% {
+      background-color: #ea2f38; /* Rojo nuevamente */
+    }
+  }
+  
+  .button-flotante.titilar {
+    animation: titilar 1s infinite; /* Duración de 1 segundo, repetición infinita */
+  }
+  
