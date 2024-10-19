@@ -1,9 +1,7 @@
 :root {
-    --color1: #ea2f38;
+    --color1:#b22222;
     --color2: black;
-    ;
     --color3: white;
-
     --texto: #ffd402;
     ;
 }
@@ -370,21 +368,6 @@ footer a {
     transition: 1s;
 }
 
-/* .box_footer:hover {
-    color: white;
-    background-color: var(--color2);
-    transition-timing-function: linear;
-} */
-
-/* .box_footer a:hover {
-    text-decoration: none;
-    color: #FFF;
-} */
-
-
-
-
-
 /* Estilos para el botón "Subir" */
 .scroll-to-top {
     display: none;
@@ -464,58 +447,6 @@ footer a {
     margin-right: 0.5em;
     margin-left: 0.5em;
 }
-
-/* Fonts */
-.dancing-script {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.satisfy-regular {
-    font-family: "Satisfy", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.great-vibes-regular {
-    font-family: "Great Vibes", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.sacramento-regular {
-    font-family: "Sacramento", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.tangerine-regular {
-    font-family: "Tangerine", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.tangerine-bold {
-    font-family: "Tangerine", cursive;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.cookie-regular {
-    font-family: "Cookie", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.parisienne-regular {
-    font-family: "Parisienne", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
 
 @media screen and (max-width:449px) {
 
