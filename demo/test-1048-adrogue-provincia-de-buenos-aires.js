@@ -22,23 +22,24 @@ function agregarAlCarrito(nombre, precio) {
             carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
         }
 
+
         // Selecciona el botón flotante del carrito
         const botonCarrito = document.querySelector('.button-flotante');
         
         // Añade la clase que hace que titile
         botonCarrito.classList.add('titilar');
         
-        // Mantener el titileo por un tiempo (ej: 3 segundos) y luego detenerlo
+        // Mantener el titileo por un tiempo (ej: 6 segundos) y luego detenerlo
         setTimeout(() => {
             botonCarrito.classList.remove('titilar');
-        }, 6000); // Cambia 3000 por el tiempo que desees en milisegundos (3 segundos)
+        }, 6000); // tiempo que desees en milisegundos (6 segundos)
+
 
         // Actualizar la visualización del carrito
         actualizarCarrito();
     } else {
         alert("La cantidad ingresada no es válida.");
     }
-
 }
 
 
