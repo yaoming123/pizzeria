@@ -1,4 +1,5 @@
-:root {
+
+    :root {
     --color1:#b22222;
     --color2: black;
     --color3: white;
@@ -9,7 +10,7 @@
     font-size: 1em;
     text-align: center;
     background-color: var(--color2);
-
+    
 }
 
 .scroll-section {
@@ -28,6 +29,30 @@
     animation-duration: 2s;
     /* don't forget to set a duration! */
     animation-iteration-count: infinite;
+
+}
+
+.animation_back_in_rigth {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: slideInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    /* animation-iteration-count: infinite; */
+
+}
+
+.animation_bounce {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+    /* animation-iteration-count: infinite; */
 
 }
 
@@ -213,7 +238,6 @@ h3 {
     margin: 0 auto;
     max-width: 1200px;
 }
-
 .producto {
     border-style: solid;
     display: inline-block;
@@ -229,8 +253,8 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
-
-.producto img {
+  
+.producto img{
     width: 10em;
     height: 10em;
     float: none;
@@ -275,7 +299,7 @@ h3 {
 
 }
 
-#container-carrito {
+#container-carrito{
     margin-top: auto;
     background-color: var(--color2);
     padding-bottom: 5em;
@@ -288,22 +312,19 @@ h3 {
     color: black;
     border-radius: 0.4em;
 }
-
 #container-carrito .button1:hover {
     background-color: var(--color1);
     color: white;
 }
 
-#carrito {
+#carrito{
     font-size: 2em;
     padding-bottom: 2em;
 }
-
-#carrito li {
+#carrito li{
     list-style: none;
     border-style: solid;
 }
-
 #carrito ul li .button1 {
     width: 30%;
     margin: 0.5em;
@@ -311,7 +332,6 @@ h3 {
     color: black;
     border-radius: 0.4em;
 }
-
 #carrito ul li .button1:hover {
     background-color: var(--color1);
     color: white;
@@ -367,6 +387,18 @@ footer a {
     transition: 1s;
 }
 
+/* .box_footer:hover {
+    color: white;
+    background-color: var(--color2);
+    transition-timing-function: linear;
+} */
+
+/* .box_footer a:hover {
+    text-decoration: none;
+    color: #FFF;
+} */
+
+
 /* Estilos para el botón "Subir" */
 .scroll-to-top {
     display: none;
@@ -400,7 +432,7 @@ footer a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 25px; */
+    font-size: 25px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -423,7 +455,6 @@ footer a {
 }
 
 .button-flotante {
-    /* border: 0.2em solid var(--rojo); */
     position: fixed;
     bottom: 2%;
     right: 3%;
@@ -432,8 +463,6 @@ footer a {
     padding: 0.6em 0.6em;
     font-size: 2em;
     cursor: pointer;
-    /* border-radius: 5px; */
-    /* border-radius: 0.4em; */
     text-decoration: none;
     margin-bottom: -10px;
 }
@@ -449,11 +478,10 @@ footer a {
 
 @media screen and (max-width:449px) {
 
-    .box_footer {
+    .box_footer{
         width: min-content;
     }
-
-    .separador_box_footer {
+    .separador_box_footer{
         width: 100%;
     }
 }
@@ -465,12 +493,19 @@ footer a {
     }
 
     nav::after {
-        content: "Menu";
+        content: "Menú";
         font-size: 1.5rem;
         display: block;
         text-align: center;
         cursor: pointer;
         padding: 1rem;
+        color: black;
+        text-decoration: underline;
+        text-decoration: underline;
+        /* border-style: solid; */
+        margin-bottom: 0.9em;
+        border-top: solid;
+        border-bottom: solid;
     }
 
     nav.active ul {
@@ -522,4 +557,4 @@ footer a {
   .button-flotante.titilar {
     animation: titilar 1s infinite; /* Duración de 1 segundo, repetición infinita */
   }
-  
+    
