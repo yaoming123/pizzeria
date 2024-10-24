@@ -7,7 +7,7 @@
 }
 
 .message {
-    font-size: 1em;
+    font-size: 1rem;
     text-align: center;
     background-color: var(--color2);
     
@@ -58,7 +58,8 @@
 
 .responsive-iframe {
     width: 90%;
-    padding: 1em;
+    padding: 1rem;
+    height: 18rem;
 }
 
 * {
@@ -75,10 +76,8 @@ html {
 body {
     /* text-transform: uppercase; */
     font-size: 16px;
-    /* background-color: white;
-    color: white; */
     color: var(--texto);
-    background-size: 6em;
+    background-size: 6rem;
 }
 
 /* NAV */
@@ -110,7 +109,7 @@ a {
 nav ul li a {
     color: black;
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.5rem;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     /* font-size: 0.5em; */
@@ -154,7 +153,7 @@ header {
     /* background-position: center, center; */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-    min-height: 20.345em;
+    min-height: 20.345rem;
 }
 
 
@@ -184,13 +183,14 @@ main {
     height: auto;
     text-align: center;
     font-variant: all-petite-caps;
-    padding-bottom: 2em;
+    padding-bottom: 2rem;
 }
 
 #productos {
     margin-top: auto;
     /* padding-top: 5em;
     padding-bottom: 5em; */
+
     background-color: var(--color2);
 }
 
@@ -199,7 +199,7 @@ main {
 h3 {
     /* font-size: 4rem; */
     padding: initial;
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
 #productos h2 {
@@ -230,7 +230,7 @@ h3 {
 
 .servicio {
     display: inline-block;
-    padding: 1em;
+    padding: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     justify-items: center;
@@ -241,22 +241,22 @@ h3 {
 .producto {
     border-style: solid;
     display: inline-block;
-    padding: 1em;
+    padding: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
     /* margin: 0 auto; */
-    margin: 1em;
-    width: 18em;
-    margin-bottom: 1em;
+    margin: 1rem;
+    width: 18rem;
+    margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
 }
   
 .producto img{
-    width: 10em;
-    height: 10em;
+    width: 10rem;
+    height: 10rem;
     float: none;
 }
 
@@ -292,7 +292,7 @@ h3 {
     border: 2px solid #000;
     border-radius: 10px;
     /* aspect-ratio: 1 / 1;  */
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-decoration: none;
     /* color: #fff; */
     background-color: #333333e8;
@@ -302,7 +302,7 @@ h3 {
 #container-carrito{
     margin-top: auto;
     background-color: var(--color2);
-    padding-bottom: 5em;
+    padding-bottom: 5rem;
     border-style: solid;
 }
 
@@ -310,16 +310,17 @@ h3 {
     width: 50%;
     background-color: #ffffff;
     color: black;
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
 }
+
 #container-carrito .button1:hover {
     background-color: var(--color1);
     color: white;
 }
 
 #carrito{
-    font-size: 2em;
-    padding-bottom: 2em;
+    font-size: 2rem;
+    padding-bottom: 2rem;
 }
 #carrito li{
     list-style: none;
@@ -327,10 +328,10 @@ h3 {
 }
 #carrito ul li .button1 {
     width: 30%;
-    margin: 0.5em;
+    margin: 0.5rem;
     background-color: #ffffff;
     color: black;
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
 }
 #carrito ul li .button1:hover {
     background-color: var(--color1);
@@ -348,8 +349,8 @@ footer {
 }
 
 footer img {
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
     text-decoration: none;
     margin-top: auto;
     /* margin-bottom: -7px; */
@@ -380,9 +381,9 @@ footer a {
 
 .box_footer {
     width: fit-content;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     float: left;
     transition: 1s;
 }
@@ -428,12 +429,11 @@ footer a {
 .button {
     border: none;
     /* color: white; */
-    padding: 16px 32px;
+    padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
+    margin: 0.25rem 0.125rem;
     transition-duration: 0.4s;
     cursor: pointer;
     font-variant: normal;
@@ -460,8 +460,8 @@ footer a {
     right: 3%;
     background-color: var(--color1);
     color: #fff;
-    padding: 0.6em 0.6em;
-    font-size: 2em;
+    padding: 0.6rem 0.6rem;
+    font-size: 2rem;
     cursor: pointer;
     text-decoration: none;
     margin-bottom: -10px;
@@ -472,8 +472,8 @@ footer a {
     float: left;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 @media screen and (max-width:449px) {
@@ -503,7 +503,7 @@ footer a {
         text-decoration: underline;
         text-decoration: underline;
         /* border-style: solid; */
-        margin-bottom: 0.9em;
+        margin-bottom: 0.9rem;
         border-top: solid;
         border-bottom: solid;
     }
@@ -537,8 +537,8 @@ footer a {
     } */
 
     .button-flotante {
-        font-size: 2.3em;
-        padding: 8px 16px;
+        font-size: 2.3rem;
+        padding: 0.5rem 1rem;
     }
 }
 
