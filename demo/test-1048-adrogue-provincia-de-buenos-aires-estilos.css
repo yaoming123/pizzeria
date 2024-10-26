@@ -1,16 +1,18 @@
-
-    :root {
-    --color1:#b22222;
+:root {
     --color2: black;
     --color3: white;
+
     --texto: #ffd402;
+
+    --color1: #b22222;
+    --color4: #ea2f38;
 }
 
 .message {
     font-size: 1rem;
     text-align: center;
     background-color: var(--color2);
-    
+
 }
 
 .scroll-section {
@@ -82,7 +84,7 @@ body {
 
 /* NAV */
 nav {
-    background-color: white;
+    background-color: var(--color3);
     position: sticky;
     top: 0;
     text-align: center;
@@ -107,7 +109,7 @@ a {
 }
 
 nav ul li a {
-    color: black;
+    color: var(--color2);
     display: inline-block;
     padding: 0.5rem;
     text-decoration: none;
@@ -125,7 +127,7 @@ nav ul li a:active {
 }
 
 nav ul li a::before {
-    background-color: white;
+    background-color: var(--color3);
 }
 
 nav ul li a.active::before {
@@ -212,20 +214,36 @@ h3 {
 }
 
 #productos p {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: 2rem;
+    /* Ajusta el tamaño de fuente para uniformidad */
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 
 #productos .button1 {
+    font-size: 1.3rem;
+    /* Tamaño del texto en rem */
     width: 100%;
-    background-color: #ffffff;
-    color: black;
+    /* Asegura que los botones ocupen el ancho completo del contenedor */
+    max-width: 18.75rem;
+    /* Equivalente a 300px, define un ancho máximo para evitar botones demasiado grandes */
+    height: 3.125rem;
+    /* Equivalente a 50px, establece una altura uniforme */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color3);
+    color: var(--color2);
     font-family: 'Bebas Neue';
+    transition: background-color 0.3s ease;
 }
 
 #productos .button1:hover {
     background-color: var(--color1);
-    color: white;
+    color: var(--color3);
 }
 
 .servicio {
@@ -238,26 +256,42 @@ h3 {
     margin: 0 auto;
     max-width: 1200px;
 }
+
 .producto {
     border-style: solid;
-    display: inline-block;
     padding: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-    justify-items: center;
-    align-items: center;
-    /* margin: 0 auto; */
-    margin: 1rem;
     width: 18rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    /* Define el ancho del producto */
+    min-height: 25rem;
+    /* Establece una altura mínima para uniformar los productos */
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Espacia los elementos */
+    /* border-style: solid; */
+    /* display: inline-block; */
+    /* padding: 1rem; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-gap: 20px; */
+    /* justify-items: center; */
+    /* align-items: center; */
+    /* margin: 0 auto; */
+    /* margin: 1rem; */
+    /* width: 18rem; */
+    /* margin-bottom: 1rem; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* min-height: 25rem; */
+    /* justify-content: space-between; */
 }
-  
-.producto img{
+
+.producto img {
     width: 10rem;
     height: 10rem;
-    float: none;
+    /* float: none; */
+    margin: 1rem 0;
 }
 
 /* Seccion contacto */
@@ -289,17 +323,18 @@ h3 {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    border: 2px solid #000;
+    border: 2px solid var(--color2);
+    ;
     border-radius: 10px;
     /* aspect-ratio: 1 / 1;  */
     font-size: 1.5rem;
     text-decoration: none;
-    /* color: #fff; */
-    background-color: #333333e8;
-
+    /* background-color: #333333e8; ESTE Es ORIGINAL*/
+    background-color: var(--color2);
+    ;
 }
 
-#container-carrito{
+#container-carrito {
     margin-top: auto;
     background-color: var(--color2);
     padding-bottom: 5rem;
@@ -308,34 +343,37 @@ h3 {
 
 #container-carrito .button1 {
     width: 50%;
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--color3);
+    color: var(--color2);
     border-radius: 0.4rem;
 }
 
 #container-carrito .button1:hover {
     background-color: var(--color1);
-    color: white;
+    color: var(--color3);
 }
 
-#carrito{
+#carrito {
     font-size: 2rem;
     padding-bottom: 2rem;
 }
-#carrito li{
+
+#carrito li {
     list-style: none;
     border-style: solid;
 }
+
 #carrito ul li .button1 {
     width: 30%;
     margin: 0.5rem;
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--color3);
+    color: var(--color2);
     border-radius: 0.4rem;
 }
+
 #carrito ul li .button1:hover {
     background-color: var(--color1);
-    color: white;
+    color: var(--color3);
 }
 
 footer {
@@ -359,20 +397,20 @@ footer img {
 footer a {
     text-decoration: none;
     /* font-size: 1.69em; */
-    color: black;
+    color: var(--color2);
 }
 
 .box_logo {
     text-align: center;
     padding: 0;
     margin: 0;
-    background-color: white;
+    background-color: var(--color3);
 }
 
 .box_logo p {
     /* font-size: x-large; */
     font-size: 3rem;
-    color: black;
+    color: var(--color2);
 }
 
 .box_logo img {
@@ -409,7 +447,7 @@ footer a {
     right: 20px;
     /* background-color: #007bff; */
     /* Color de fondo */
-    color: #fff;
+    color: var(--color3);
     /* Color del texto */
     border-radius: 50%;
     /* Hacerlo circular */
@@ -428,7 +466,6 @@ footer a {
 
 .button {
     border: none;
-    /* color: white; */
     padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
@@ -441,17 +478,17 @@ footer a {
 
 .button1 {
     /* border-radius: 0.4em; */
-    color: black;
-    background-color: white;
+    color: var(--color2);
+    background-color: var(--color3);
 }
 
 .button2 {
-    background-color: white;
-    color: black;
+    background-color: var(--color3);
+    color: var(--color2);
 }
 
 .button1:hover {
-    color: black;
+    color: var(--color2);
 }
 
 .button-flotante {
@@ -459,7 +496,7 @@ footer a {
     bottom: 2%;
     right: 3%;
     background-color: var(--color1);
-    color: #fff;
+    color: var(--color3);
     padding: 0.6rem 0.6rem;
     font-size: 2rem;
     cursor: pointer;
@@ -478,10 +515,11 @@ footer a {
 
 @media screen and (max-width:449px) {
 
-    .box_footer{
+    .box_footer {
         width: min-content;
     }
-    .separador_box_footer{
+
+    .separador_box_footer {
         width: 100%;
     }
 }
@@ -499,7 +537,7 @@ footer a {
         text-align: center;
         cursor: pointer;
         padding: 1rem;
-        color: black;
+        color: var(--color2);
         text-decoration: underline;
         text-decoration: underline;
         /* border-style: solid; */
@@ -544,17 +582,22 @@ footer a {
 
 @keyframes titilar {
     0% {
-      background-color: #ea2f38; /* Rojo inicial */
+        background-color: var(--color4);
+        /* Rojo inicial */
     }
+
     50% {
-      background-color: var(--texto); /* Color alternativo */
+        background-color: var(--texto);
+        /* Color alternativo */
     }
+
     100% {
-      background-color: #ea2f38; /* Rojo nuevamente */
+        background-color: var(--color4);
+        /* Rojo nuevamente */
     }
-  }
-  
-  .button-flotante.titilar {
-    animation: titilar 1s infinite; /* Duración de 1 segundo, repetición infinita */
-  }
-    
+}
+
+.button-flotante.titilar {
+    animation: titilar 1s infinite;
+    /* Duración de 1 segundo, repetición infinita */
+}
