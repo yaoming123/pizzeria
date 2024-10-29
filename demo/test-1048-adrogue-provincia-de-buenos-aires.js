@@ -7,6 +7,7 @@ var numeroWhatsApp = "5491122413762"; //
 
 // Función para agregar productos al carrito
 function agregarAlCarrito(nombre, precio) {
+    
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
 
     // Verificar que la cantidad ingresada sea válida
@@ -39,7 +40,7 @@ function agregarAlCarrito(nombre, precio) {
 
         // Actualizar la visualización del carrito
         actualizarCarrito();
-        
+
         // Enviar la información al Data Layer para Google Tag Manager
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
@@ -48,12 +49,13 @@ function agregarAlCarrito(nombre, precio) {
             precio: precio,
             cantidad: cantidad
         });
+        
     } else {
         alert("La cantidad ingresada no es válida.");
     }
 }
 
-
+// Nota: Se va a necesitar que retorne el producto, cantidad, precio(opcional)
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(id) {
     carrito = carrito.filter(function (producto) {
@@ -92,7 +94,6 @@ window.onload = function() {
 };
 
 
-
 // Función para editar la cantidad de un producto en el carrito
 function editarProducto(id) {
     var nuevoCantidad = parseInt(prompt("Ingrese la nueva cantidad:"));
@@ -102,18 +103,27 @@ function editarProducto(id) {
         });
         producto.cantidad = nuevoCantidad;
         actualizarCarrito();
+
+        // Lógica para editar la cantidad de un producto en el carrito
+        // dataLayer.push({
+        //     event: "edit_cart",
+        //     producto: nombreProducto,
+        //     nuevaCantidad: nuevoCantidad
+
+        // });
     } else {
         alert("La cantidad ingresada no es válida.");
     }
 }
 
 function solicitarDireccion() {
+    // NOTA: Quiero anonimizar esto ya que los links tendrian informacion confidencial.
+    // direccion = [COMPLETAR EN WHATSAPP SU DIRECCION]
     direccion = prompt("Ingrese direccion, localidad y entre calles");
     while (direccion === "") {
         direccion = prompt("Por favor, ingrese una dirección válida:");
     }
 }
-
 
 // Función para seleccionar el medio de pago
 function seleccionarMedioPago() {
@@ -131,24 +141,33 @@ function calcularTotal() {
 }
 // Función para enviar el pedido por WhatsApp
 function enviarPedido() {
+    
+    // Comprobar que el medio de pago no se encuentre vacío
     if (medioPago === "") {
         alert("Por favor seleccione el medio de pago antes de enviar el pedido.");
         return;
     }
 
+    // Comprobar que la direccíon no se encuentre vacío
     if (direccion === "") {
         alert("Por favor ingrese una direccion antes de enviar el pedido.");
         return
     }
 
+    // Generar el mensaje que se va a enviar por WhatsApp
     var mensaje = "¡Hola! Quiero hacer el siguiente pedido:\n";
+
+    // Recorremos los elementos del carrito
     carrito.forEach(function (producto) {
+        // Agregamos al mensaje los productos (cantidad, nombre del producto)
         mensaje += producto.cantidad + "x " + producto.nombre + "\n";
     });
+
+    // Agregamos al mensaje direccion y el medio de pago
     mensaje += "Dirección: " + direccion + "\n";
     mensaje += "Medio de Pago: " + medioPago + "\n";
 
-    // Calcular el vuelto para poner en el mensaje
+    // Calcular el vuelto para agregar en el mensaje
     var total = calcularTotal();
 
     // Agregar detalles adicionales según el medio de pago
@@ -163,6 +182,8 @@ function enviarPedido() {
         }    
         mensaje += "Voy a abonar con: " + montoAbonado + "$\n";
     } else if (medioPago === "Transferencia Bancaria") {
+        // NOTA: Quiero anonimizar esto ya que los links tendrian informacion confidencial. Esto podrian completarlo en whatsapp directamente.
+        // nombreydocumento = [COMPLETAR AQUÍ SU NOMBRE Y DOCUMENTO]
         var nombreydocumento = prompt("Ingrese el nombre completo y documento de quién realizará la transferencia bancaria:");
         while (nombreydocumento === ""){
             nombreydocumento = prompt("Por favor, ingrese un nombre y documento válido:"); 
@@ -175,12 +196,14 @@ function enviarPedido() {
     // Mensaje final, listo para enviar.
     var vuelto = montoAbonado - total;
     mensaje += "El Total: " + total + "$\n";
+
     //Comprueba que haya un vuelto, si no corresponde no lo muestra en el mensaje
     if (isNaN(vuelto) == true){
         vuelto = "";
     } else{
         mensaje += "El vuelto:" + vuelto + "$"
     }
+
 
     if (mensaje.includes("null")) {
         // Reemplazar "null" por "[COMPLETAR AQUI]"
@@ -191,7 +214,7 @@ function enviarPedido() {
 
      // Copiar mensaje al portapapeles
     navigator.clipboard.writeText(mensaje).then(function() {
-        alert('Si el link de WhatsApp no carga el pedido en la App. El pedido ha sido copiado al portapapeles, solo péguelo');
+        alert('Se copiará el pedido al portapapeles. Puede pegar el pedido si no se carga el pedido en WhatsApp');
     }, function(err) {
         alert('Error al copiar el pedido: ', err);
     });
@@ -199,6 +222,16 @@ function enviarPedido() {
     // Construir el enlace para WhatsApp
     var enlacePedido = "https://wa.me/" + 5491122413762 + "?text=" + encodeURIComponent(mensaje);
 
+    // Agregar evento al dataLayer
+    dataLayer.push({
+        event: "pedido_generado",
+        pedido: {
+            mensaje: mensaje,
+            total: total,
+            medioPago: medioPago
+        }
+    });
+    
     // Asignar el enlace al enlace de pedido
     document.getElementById("pedidoLink").href = enlacePedido;
 }
