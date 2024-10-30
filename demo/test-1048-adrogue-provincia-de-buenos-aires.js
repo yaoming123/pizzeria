@@ -55,13 +55,18 @@ function agregarAlCarrito(nombre, precio) {
     }
 }
 
-// Nota: Se va a necesitar que retorne el producto, cantidad, precio(opcional)
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(id) {
     carrito = carrito.filter(function (producto) {
         return producto.id !== id;
     });
     actualizarCarrito();
+
+    // Enviar la información al Data Layer para Google Tag Manager. Eliminar un producto en el carrito
+    dataLayer.push({
+        event: "remove_from_cart",
+    });
+
 }
 
 // Función para actualizar la visualización del carrito
@@ -104,13 +109,14 @@ function editarProducto(id) {
         producto.cantidad = nuevoCantidad;
         actualizarCarrito();
 
-        // Lógica para editar la cantidad de un producto en el carrito
-        // dataLayer.push({
-        //     event: "edit_cart",
-        //     producto: nombreProducto,
-        //     nuevaCantidad: nuevoCantidad
+        // Enviar la información al Data Layer para Google Tag Manager. Editar un producto en el carrito
+        dataLayer.push({
+            event: "edit_cart",
+            // producto: nombreProducto,
+            producto: producto.nombre,
+            nuevaCantidad: nuevoCantidad
+        });
 
-        // });
     } else {
         alert("La cantidad ingresada no es válida.");
     }
@@ -196,6 +202,8 @@ function enviarPedido() {
 
     var enlacePedido = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
 
+    // Enviar la información al Data Layer para Google Tag Manager. Se genera el pedido con la informacion relevante para el negocio.
+    window.dataLayer = window.dataLayer || [];
     dataLayer.push({
         event: "pedido_generado",
         pedido: {
