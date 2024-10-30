@@ -1,3 +1,5 @@
+/* a  */
+
 :root {
     --color2: black;
     --color3: white;
@@ -346,6 +348,7 @@ h3 {
     background-color: var(--color3);
     color: var(--color2);
     border-radius: 0.4rem;
+    justify-self: center;
 }
 
 #container-carrito .button1:hover {
@@ -369,6 +372,8 @@ h3 {
     background-color: var(--color3);
     color: var(--color2);
     border-radius: 0.4rem;
+    justify-self: center;
+
 }
 
 #carrito ul li .button1:hover {
@@ -601,3 +606,5 @@ footer a {
     animation: titilar 1s infinite;
     /* Duración de 1 segundo, repetición infinita */
 }
+
+    
