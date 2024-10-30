@@ -7,7 +7,7 @@ var numeroWhatsApp = "5491122413762"; //
 
 // Función para agregar productos al carrito
 function agregarAlCarrito(nombre, precio) {
-    
+
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
 
     // Verificar que la cantidad ingresada sea válida
@@ -24,14 +24,14 @@ function agregarAlCarrito(nombre, precio) {
             // Si el producto no está en el carrito, agregarlo
             carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
         }
-        
+
 
         // Selecciona el botón flotante del carrito
         const botonCarrito = document.querySelector('.button-flotante');
-        
+
         // Añade la clase que hace que titile
         botonCarrito.classList.add('titilar');
-        
+
         // Mantener el titileo por un tiempo (ej: 6 segundos) y luego detenerlo
         setTimeout(() => {
             botonCarrito.classList.remove('titilar');
@@ -49,7 +49,7 @@ function agregarAlCarrito(nombre, precio) {
             precio: precio,
             cantidad: cantidad
         });
-        
+
     } else {
         alert("La cantidad ingresada no es válida.");
     }
@@ -65,6 +65,7 @@ function eliminarDelCarrito(id) {
     // Enviar la información al Data Layer para Google Tag Manager. Eliminar un producto en el carrito
     dataLayer.push({
         event: "remove_from_cart",
+        producto: producto.nombre
     });
 
 }
@@ -94,7 +95,7 @@ function actualizarCarrito() {
 
 
 // Llamar a actualizarCarrito() cuando se carga la página por primera vez
-window.onload = function() {
+window.onload = function () {
     actualizarCarrito();
 };
 
@@ -157,14 +158,16 @@ function enviarPedido() {
         return;
     }
 
-    var mensaje = "*¡Hola! Quiero hacer el siguiente pedido:*\n\n";
+    var mensaje = "*¡Hola! Quiero hacer el siguiente pedido:*\n \n";
 
     carrito.forEach(function (producto) {
-        mensaje += `- ${producto.cantidad}x ${producto.nombre}.... ${producto.precio} (c/u) .... Subtotal:${producto.cantidad * producto.precio} \n`;
+        mensaje += `- ${producto.cantidad}x ${producto.nombre}.... ${producto.precio} (c/u) .... Subtotal:${producto.cantidad * producto.precio} 
+`;
     });
 
-    mensaje += `\n*Dirección de entrega:* ${direccion}\n`;
-    mensaje += `*Medio de Pago:* ${medioPago}\n`;
+    mensaje += `
+*Dirección de entrega:* ${direccion}"\n`;
+    mensaje += `*Medio de Pago:* ${medioPago}"\n`;
 
     var total = calcularTotal();
 
@@ -174,18 +177,19 @@ function enviarPedido() {
             montoAbonado = parseFloat(prompt("El total es: " + total + "¿Con cuánto va a abonar?"));
         } while (isNaN(montoAbonado));
 
-        mensaje += `\n*El Total:* ${total}$\n`;
+        mensaje += `
+*El Total:* ${total}$"\n`;
 
-        mensaje += `*Voy a abonar con:* ${montoAbonado}$\n\n`;
+        mensaje += `*Voy a abonar con:* ${montoAbonado}$"\n "\n`;
         var vuelto = montoAbonado - total;
         if (!isNaN(vuelto) && vuelto > 0) {
-            mensaje += `*El vuelto:* ${vuelto}$\n\n`;
-            mensaje += `*Gracias, espero la confirmación de la preparación del pedido.*\n`;
+            mensaje += `*El vuelto:* ${vuelto}$"\n "\n`;
+            mensaje += `*Gracias, espero la confirmación de la preparación del pedido.*"\n`;
 
         }
     } else if (medioPago === "Transferencia Bancaria") {
         var nombreydocumento = prompt("Ingrese el nombre completo y documento de quién realizará la transferencia bancaria:");
-        mensaje += `*Nombre/Documento de quién transfiere:* ${nombreydocumento}\n`;
+        mensaje += `*Nombre/Documento de quién transfiere:* ${nombreydocumento}"\n`;
     } else if (medioPago === "Tarjeta de crédito o débito") {
         mensaje += "*Se llevará un posnet para abonar.*\n";
     }
@@ -196,7 +200,7 @@ function enviarPedido() {
         return;
     }
 
-    navigator.clipboard.writeText(mensaje).then(function() {
+    navigator.clipboard.writeText(mensaje).then(function () {
         alert('Se copiará el pedido al portapapeles. Puede pegar el pedido si no se carga en WhatsApp.');
     });
 
@@ -215,5 +219,3 @@ function enviarPedido() {
 
     document.getElementById("pedidoLink").href = enlacePedido;
 }
-
-    
