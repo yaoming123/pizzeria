@@ -141,88 +141,61 @@ function calcularTotal() {
 }
 // Función para enviar el pedido por WhatsApp
 function enviarPedido() {
-    
-    // Comprobar que el medio de pago no se encuentre vacío
     if (medioPago === "") {
         alert("Por favor seleccione el medio de pago antes de enviar el pedido.");
         return;
     }
 
-    // Comprobar que la direccíon no se encuentre vacío
     if (direccion === "") {
-        alert("Por favor ingrese una direccion antes de enviar el pedido.");
-        return
+        alert("Por favor ingrese una dirección antes de enviar el pedido.");
+        return;
     }
 
-    // Generar el mensaje que se va a enviar por WhatsApp
-    var mensaje = "¡Hola! Quiero hacer el siguiente pedido:\n";
+    var mensaje = "*¡Hola! Quiero hacer el siguiente pedido:*\n\n";
 
-    // Recorremos los elementos del carrito
     carrito.forEach(function (producto) {
-        // Agregamos al mensaje los productos (cantidad, nombre del producto)
-        mensaje += producto.cantidad + "x " + producto.nombre + "\n";
+        mensaje += `- ${producto.cantidad}x ${producto.nombre}.... ${producto.precio} (c/u) .... Subtotal:${producto.cantidad * producto.precio} \n`;
     });
 
-    // Agregamos al mensaje direccion y el medio de pago
-    mensaje += "Dirección: " + direccion + "\n";
-    mensaje += "Medio de Pago: " + medioPago + "\n";
+    mensaje += `\n*Dirección de entrega:* ${direccion}\n`;
+    mensaje += `*Medio de Pago:* ${medioPago}\n`;
 
-    // Calcular el vuelto para agregar en el mensaje
     var total = calcularTotal();
 
-    // Agregar detalles adicionales según el medio de pago
     if (medioPago === "Efectivo") {
         var montoAbonado;
-        do{
+        do {
             montoAbonado = parseFloat(prompt("El total es: " + total + "¿Con cuánto va a abonar?"));
         } while (isNaN(montoAbonado));
-        
-        while (montoAbonado === ""){
-           montoAbonado = prompt("Por favor, ingrese un monto válido:"); 
-        }    
-        mensaje += "Voy a abonar con: " + montoAbonado + "$\n";
+
+        mensaje += `\n*El Total:* ${total}$\n`;
+
+        mensaje += `*Voy a abonar con:* ${montoAbonado}$\n\n`;
+        var vuelto = montoAbonado - total;
+        if (!isNaN(vuelto) && vuelto > 0) {
+            mensaje += `*El vuelto:* ${vuelto}$\n\n`;
+            mensaje += `*Gracias, espero la confirmación de la preparación del pedido.*\n`;
+
+        }
     } else if (medioPago === "Transferencia Bancaria") {
-        // NOTA: Quiero anonimizar esto ya que los links tendrian informacion confidencial. Esto podrian completarlo en whatsapp directamente.
-        // nombreydocumento = [COMPLETAR AQUÍ SU NOMBRE Y DOCUMENTO]
         var nombreydocumento = prompt("Ingrese el nombre completo y documento de quién realizará la transferencia bancaria:");
-        while (nombreydocumento === ""){
-            nombreydocumento = prompt("Por favor, ingrese un nombre y documento válido:"); 
-        } 
-        mensaje += "Nombre/Documento de quién transfiere: " + nombreydocumento + "\n";
+        mensaje += `*Nombre/Documento de quién transfiere:* ${nombreydocumento}\n`;
     } else if (medioPago === "Tarjeta de crédito o débito") {
-        mensaje += "Se llevará un posnet para abonar.\n";
+        mensaje += "*Se llevará un posnet para abonar.*\n";
     }
-
-    // Mensaje final, listo para enviar.
-    var vuelto = montoAbonado - total;
-    mensaje += "El Total: " + total + "$\n";
-
-    //Comprueba que haya un vuelto, si no corresponde no lo muestra en el mensaje
-    if (isNaN(vuelto) == true){
-        vuelto = "";
-    } else{
-        mensaje += "El vuelto:" + vuelto + "$"
-    }
-
 
     if (mensaje.includes("null")) {
-        // Reemplazar "null" por "[COMPLETAR AQUI]"
         var mensajeModificado = mensaje.replace(/null/g, "[COMPLETAR AQUI]");
         alert("Por favor complete los datos anteriores:\n" + mensajeModificado);
         return;
     }
 
-     // Copiar mensaje al portapapeles
     navigator.clipboard.writeText(mensaje).then(function() {
-        alert('Se copiará el pedido al portapapeles. Puede pegar el pedido si no se carga el pedido en WhatsApp');
-    }, function(err) {
-        alert('Error al copiar el pedido: ', err);
+        alert('Se copiará el pedido al portapapeles. Puede pegar el pedido si no se carga en WhatsApp.');
     });
 
-    // Construir el enlace para WhatsApp
-    var enlacePedido = "https://wa.me/" + 5491122413762 + "?text=" + encodeURIComponent(mensaje);
+    var enlacePedido = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
 
-    // Agregar evento al dataLayer
     dataLayer.push({
         event: "pedido_generado",
         pedido: {
@@ -231,8 +204,8 @@ function enviarPedido() {
             medioPago: medioPago
         }
     });
-    
-    // Asignar el enlace al enlace de pedido
+
     document.getElementById("pedidoLink").href = enlacePedido;
 }
+
     
