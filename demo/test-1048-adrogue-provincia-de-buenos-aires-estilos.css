@@ -1,3 +1,4 @@
+
 :root {
     --color2: black;
     --color3: white;
@@ -274,6 +275,7 @@ h3 {
     margin-top: auto;
     background-color: var(--color2);
     padding-bottom: 5rem;
+    padding-top: 2rem;
     border-style: solid;
 }
 
@@ -424,12 +426,17 @@ footer img {
 
 @media screen and (max-width:449px) {
 
-    .box_footer {
+    /* .box_footer {
         width: min-content;
-    }
+    } */
 
     .separador_box_footer {
-        width: 100%;
+        float: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        text-align: left;
     }
 }
 
@@ -508,3 +515,4 @@ footer img {
     animation: titilar 1s infinite;
     /* Duración de 1 segundo, repetición infinita */
 }
+
