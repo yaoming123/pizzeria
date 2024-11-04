@@ -1,14 +1,8 @@
 :root {
-    --color1:#ea2f38;
-    --color2:black;;
-    --color3:white;
-
-    --texto:#ffd402; 
-;
-    /* --color3:white;
-    --color3:white;
-    --color3:white;
-    --color3:white; */
+    --color1: #ea2f38;
+    --color2: black;
+    --color3: white;
+    --texto: #ffd402;
 }
 
 .message {
@@ -246,6 +240,7 @@ h3 {
     margin: 0 auto;
     max-width: 1200px;
 }
+
 .producto {
     border-style: solid;
     display: inline-block;
@@ -259,8 +254,8 @@ h3 {
     width: 18em;
     margin-bottom: 1em;
 }
-  
-.producto img{
+
+.producto img {
     width: 10em;
     height: 10em;
     float: none;
@@ -305,7 +300,7 @@ h3 {
 
 }
 
-#container-carrito{
+#container-carrito {
     margin-top: auto;
     background-color: var(--color2);
     padding-bottom: 5em;
@@ -318,19 +313,22 @@ h3 {
     color: black;
     border-radius: 0.4em;
 }
+
 #container-carrito .button1:hover {
     background-color: var(--color1);
     color: white;
 }
 
-#carrito{
+#carrito {
     font-size: 2em;
     padding-bottom: 2em;
 }
-#carrito li{
+
+#carrito li {
     list-style: none;
     border-style: solid;
 }
+
 #carrito ul li .button1 {
     width: 30%;
     margin: 0.5em;
@@ -338,6 +336,7 @@ h3 {
     color: black;
     border-radius: 0.4em;
 }
+
 #carrito ul li .button1:hover {
     background-color: var(--color1);
     color: white;
@@ -465,23 +464,23 @@ footer a {
 
 /* Boton de ir al pie de la pagina */
 /* .button-flotante { */
-    /* border: 0.2em solid var(--rojo); */
-    /* position: fixed; */
-    /* bottom: 20px; */
-    /* right: 20px; */
-    /* background-color: var(--color1); */
-    /* color: #fff; */
-    /* padding: 10px 20px; */
-    /* font-size: 16px; */
-    /* cursor: pointer; */
-    /* border-radius: 5px; */
-    /* border-radius: 0.4em; */
-    /* text-decoration: none; */
-    /* margin-bottom: -10px; */
+/* border: 0.2em solid var(--rojo); */
+/* position: fixed; */
+/* bottom: 20px; */
+/* right: 20px; */
+/* background-color: var(--color1); */
+/* color: #fff; */
+/* padding: 10px 20px; */
+/* font-size: 16px; */
+/* cursor: pointer; */
+/* border-radius: 5px; */
+/* border-radius: 0.4em; */
+/* text-decoration: none; */
+/* margin-bottom: -10px; */
 
-    /* height: 21%; */
-    /* width: 10%; */
-    /* background-image: url(./anadir-al-carrito.png);
+/* height: 21%; */
+/* width: 10%; */
+/* background-image: url(./anadir-al-carrito.png);
     background-repeat: no-repeat;
     background-size: contain; */
 /* } */
@@ -513,11 +512,12 @@ footer a {
 
 /* Fonts */
 .dancing-script {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
+
 .satisfy-regular {
     font-family: "Satisfy", cursive;
     font-weight: 400;
@@ -564,10 +564,11 @@ footer a {
 
 @media screen and (max-width:449px) {
 
-    .box_footer{
+    .box_footer {
         width: min-content;
     }
-    .separador_box_footer{
+
+    .separador_box_footer {
         width: 100%;
     }
 }
