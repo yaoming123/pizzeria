@@ -471,12 +471,12 @@ footer img {
     }
 
     header h1 {
-        font-size: 3rem;
+        font-size: 6rem;
     }
 
     header h2,
     header p {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #servicios h1,

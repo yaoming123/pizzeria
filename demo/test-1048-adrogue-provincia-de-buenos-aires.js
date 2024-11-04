@@ -7,7 +7,7 @@ var numeroWhatsApp = "5491122413762"; //
 
 // Función para agregar productos al carrito
 function agregarAlCarrito(nombre, precio) {
-
+    
     var cantidad = parseInt(prompt("Ingrese la cantidad de " + nombre + ":", "1"));
 
     // Verificar que la cantidad ingresada sea válida
@@ -24,14 +24,14 @@ function agregarAlCarrito(nombre, precio) {
             // Si el producto no está en el carrito, agregarlo
             carrito.push({ id: carrito.length + 1, nombre: nombre, cantidad: cantidad, precio: precio });
         }
-
+        
 
         // Selecciona el botón flotante del carrito
         const botonCarrito = document.querySelector('.button-flotante');
-
+        
         // Añade la clase que hace que titile
         botonCarrito.classList.add('titilar');
-
+        
         // Mantener el titileo por un tiempo (ej: 6 segundos) y luego detenerlo
         setTimeout(() => {
             botonCarrito.classList.remove('titilar');
@@ -49,7 +49,7 @@ function agregarAlCarrito(nombre, precio) {
             precio: precio,
             cantidad: cantidad
         });
-
+        
     } else {
         alert("La cantidad ingresada no es válida.");
     }
@@ -95,7 +95,7 @@ function actualizarCarrito() {
 
 
 // Llamar a actualizarCarrito() cuando se carga la página por primera vez
-window.onload = function () {
+window.onload = function() {
     actualizarCarrito();
 };
 
@@ -200,7 +200,7 @@ function enviarPedido() {
         return;
     }
 
-    navigator.clipboard.writeText(mensaje).then(function () {
+    navigator.clipboard.writeText(mensaje).then(function() {
         alert('Se copiará el pedido al portapapeles. Puede pegar el pedido si no se carga en WhatsApp.');
     });
 
